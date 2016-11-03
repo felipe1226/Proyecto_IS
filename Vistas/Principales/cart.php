@@ -1,5 +1,5 @@
 <?php 
-	hablalo
+	
  ?>
 <html lang="en">
 <head>
@@ -44,8 +44,11 @@
 
 						
 						<tr>
-							<td>Codigo</td><td>Titulo</td><td></td><td>Descripcion</td>
+							<td>Codigo</td><td><input name="Codigo"  id = "codigo" type="text" placeholder="Codigo" /></td>
 						</tr>";
+						<tr>
+							<td>Titulo</td>
+						</tr>
 					}
 
 					
