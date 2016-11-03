@@ -41,7 +41,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="front.php"><img src="../../images/home/logos.png" alt ="Error 404"  width="40%" height="40%"/></a>
+							<a href="front.php"><img src="../../images/home/logo_fundacion.png" alt ="Error 404"  width="80%" height="25%"/></a>
 						</div>
 						</div>
 
