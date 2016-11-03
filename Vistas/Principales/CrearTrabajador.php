@@ -36,7 +36,7 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td colspan="4"><center>Datos de proyecto</center></td>
+							<td colspan="4"><center>Datos de Trabajador</center></td>
 						</tr>
 					</thead>
 					<tbody>
@@ -71,7 +71,6 @@
                         <form action="demo_form.asp">
   							<td><input type="checkbox" name="profesional" value="profesional">Profesional <br>&nbsp;</td>
   							<td><input type="checkbox" name="areaadministrativa" value="areaadministrativa" checked>Area Administrativa<br>&nbsp;</td>
- 						 	<input type="submit" value="Submit">
 						</form>
                         
 							
