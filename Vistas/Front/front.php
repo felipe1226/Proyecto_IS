@@ -52,7 +52,7 @@
 								<li ><a><i></i>
 								 
 								<li ><a href="../Principales/cuenta.php" target="principal"><i class="fa fa-user"></i> Cuenta</a></li>
-								echo '<li ><a href="../Principales/cargarImagenes.php" target="principal"><i class="fa fa-bookmark-o"></i> Administrar</a></li>
+								<li ><a href="../Principales/cargarImagenes.php" target="principal"><i class="fa fa-bookmark-o"></i> Administrar</a></li>
 			                    <li ><a href="#" onclick="Cerrar()"><i class="fa fa-lock"></i> Salir</a></li>
 							   
 								<li id="login"><a href="../Principales/login.php" target="principal"><i class="fa fa-unlock"></i> Login</a></li>
@@ -99,7 +99,7 @@
 								<li><a href="front.php" class="active">Inicio</a></li>
 								<li class="dropdown"><a href="#">Proyectos<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="crear_proyecto"><a href="../Principales/shop.php" target="crear_proyecto">Crear proyecto</a></li>	
+                                        <li id="crear_proyecto"><a href="../Principales/CrearProyecto.php" target="principal">Crear proyecto</a></li>	
                                         <li id="listar_proyectos"><a href="../Principales/shop.php" target="listar_proyectos">Listar Proyectos</a></li>
                                          <li id="consultar_proyectos"><a href="../Principales/shop.php" target="consultar_proyectos">Consultar proyectos</a></li>	
                                           
@@ -140,7 +140,7 @@
 	<div>
                 <div>
                       	
-                    <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/principal.php"></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/CrearProyecto.php"></iframe>
                 </div>
     </div>
 
