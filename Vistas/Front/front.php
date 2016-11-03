@@ -15,20 +15,9 @@
     <link href="../../css/animate.css" rel="stylesheet">
 	<link href="../../css/main.css" rel="stylesheet">
 	<link href="../../css/responsive.css" rel="stylesheet">
-	<link 
+	<link .href="../../css/js.css" rel="stylesheet">
 
-
-<<<<<<< HEAD
-	.href="../../css/js.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="../../images/icon/logoico.ico">
-=======
-	.href="../../css/js.css" rel="stylesheet">   
     <link rel="shortcut icon" href="../../images/icon/disenarte.ico">
->>>>>>> origin/master
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
@@ -166,6 +155,7 @@
 		</div><!--/header_top-->
 	</footer>
    
+
     <script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.scrollUp.min.js"></script>
