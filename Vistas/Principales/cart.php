@@ -47,7 +47,7 @@
 							<td>Codigo</td><td><input name="Codigo"  id = "codigo" type="text" placeholder="Codigo" /></td>
 						</tr>";
 						<tr>
-							<td>Titulo</td>
+							<td>Titulo</td><td><input name="titulo"  id = "titulo" type="text" placeholder="Titulo" /></td>
 						</tr>
 					}
 
