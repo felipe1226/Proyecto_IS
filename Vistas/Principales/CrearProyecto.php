@@ -26,13 +26,16 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 
-    <script src="../../Scripts/Carrito/Carrito.js"> </script>	
+     <script src="../../Scripts/Proyectos/Validar.js"> </script>
 
 <body>
-
+	<form id ="crearProyecto" method="POST" action="/Proyecto_IS/Controladores/Proyectos/cProyecto.php">
 	<section id="cart_items">
 		<div class="container">
+		
 			<div class="table-responsive cart_info">
+				
+				
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
@@ -187,11 +190,15 @@
 							<td colspan="2"></td>
 						</tr>
 					</tbody>
-				</table>
+				</table><br>
+					<button id="boton" type="button" class="btn btn-default" onclick="validacion()">Crear Proyecto</button>
+				
+				
 			</div>
+			</form>
 		</div>
 	</section>
-
+	</form>
   <script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.scrollUp.min.js"></script>
