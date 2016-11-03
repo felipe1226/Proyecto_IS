@@ -1,4 +1,4 @@
-document.write("<"+"script type='text/javascript' src='../../Scripts/js/alerta.js'><"+"/script>")
+document.write("<"+"script type='text/javascript' src='../Scripts/js/alerta.js'><"+"/script>")
 function validacion(){
     if($("#codigo").val() === ""){
         $("#codigo").focus();
