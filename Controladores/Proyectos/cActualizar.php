@@ -1,11 +1,11 @@
 <?php
 
-require_once("../../Modelos/Productos/mProducto.php");
+require_once("../../Modelos/Productos/mProyectos.php");
 
-$producto = new Producto();
+$proyecto = new Proyecto();
 
 
-    $producto->actualizar_Producto(  $_POST['id'],
+    $proyecto->actualizar_Proyecto(  $_POST['id'],
     							$_POST['codigo'],
                                	$_POST['nombre'], 
                                	$_POST['cantidad'],

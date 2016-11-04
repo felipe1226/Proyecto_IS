@@ -1,12 +1,12 @@
 <?php 
 require_once("../../Controladores/BaseDatos/cConexionBD.php");
 
-class Producto
+class Trabajador
 {
 
 private $bd;
 
- function Producto(){
+ function Trabajador(){
         $this->bd = new ConexionPostgres();
     }
     
@@ -15,7 +15,7 @@ private $bd;
         return $datos;
     }
 
-    function Crear_Producto($codigo, $nombre, $cantidad, $medida){
+    function Crear_Trabajador($codigo, $nombre, $cantidad, $medida){
 
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO productos(codigo,nombre,cantidad,unidad_medida)
@@ -32,7 +32,7 @@ private $bd;
         
     }
 
-  function cargar_productos(){
+  function cargar_trabajador(){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
                                             FROM productos;");
@@ -41,7 +41,7 @@ private $bd;
     }
     
 
-    function consultar_producto($rdato, $dato){
+    function consultar_trabajador($rdato, $dato){
 
         if($rdato== "codigo"){
             $this->bd->conectar();
@@ -60,7 +60,7 @@ private $bd;
         return $consulta;
     }
 
-     function actualizar_producto($id, $codigo, $nombre, $cantidad, $medida){
+     function actualizar_trabajador($id, $codigo, $nombre, $cantidad, $medida){
         $this->bd->conectar();
             $this->bd->set_Consulta("UPDATE productos SET  codigo = '".$codigo."',
                                                                 nombre = '".$nombre."',
@@ -75,7 +75,7 @@ private $bd;
                 </script>';
     }
 
-    function eliminar_producto($id){
+    function eliminar_trabajador($id){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("DELETE  FROM productos
                                                 WHERE id_codigo = ".$id.";");

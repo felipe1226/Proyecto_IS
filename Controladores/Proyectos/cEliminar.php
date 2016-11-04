@@ -1,10 +1,10 @@
 <?php
 
-require_once("../../Modelos/Productos/mProducto.php");
+require_once("../../Modelos/Productos/mProyectos.php");
 
-$producto = new Producto();
+$proyecto = new Proyecto();
 
 
-    $producto->eliminar_Producto(  $_POST['id']
+    $proyecto->eliminar_Proyecto(  $_POST['id']
             );
 ?>
