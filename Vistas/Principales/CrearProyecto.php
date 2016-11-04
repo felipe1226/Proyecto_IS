@@ -20,6 +20,7 @@
      <script src="../../Scripts/Proyectos/Validar.js"> </script>
 
 <body>
+  <div class="signup-form"><!--sign up form-->
 	<form id ="crearProyecto" method="POST" action="/Proyecto_IS/Controladores/Proyectos/cProyecto.php">
 	<section id="cart_items">
 		<div class="container">
@@ -198,5 +199,6 @@
 	<script src="../../js/price-range.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>
     <script src="../../js/main.js"></script>
+    </div>
 </body>
 </html>
