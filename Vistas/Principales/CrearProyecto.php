@@ -187,7 +187,8 @@
 				
 			</div>
 			<button id="boton" type="button" class="btn btn-default" onclick="validacion()">Crear Proyecto</button>
-			</form>
+		
+
 		</div>
 	</section>
 	</form>
