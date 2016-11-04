@@ -51,8 +51,8 @@
 							
 						</tr>
 						<tr>
-							<td>Salario :    $</td>
-						  <td><input name="Salario"  id ="Salario" type="text"  /></td>
+							<td>Salario :</td>
+						  <td><input name="Salario"  id ="Salario" type="text"  placeholder="$" /></td>
 							
 							
 						</tr>
@@ -76,16 +76,16 @@
 							
 						</tr>
 						<tr>
-							<td><select name="select2">
-                            <option>Sicologo.</option>
-							<option>Medico.</option>
+							<td><select id="select1">
+                            <option>Sicologo</option>
+							<option>Medico</option>
 							<option>Odontologo</option>
-                            <option>Trabajador social.</option>
+                            <option>Trabajador social</option>
                             <option>Pedagogo</option>
                             <option>Etc</option>
                             
 						    </select></td>
-							<td><select name="select">
+							<td><select id="select2">
                             <option>Secretaria</option>
 							<option>Servicio</option>
 							<option>generale</option>

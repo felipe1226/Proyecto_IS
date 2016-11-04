@@ -17,7 +17,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link .href="../../css/js.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="../../images/icon/disenarte.ico">
+    <link rel="shortcut icon" href="../../images/icon/logoico.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
@@ -35,30 +35,9 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="front.php"><img src="../../images/home/logo_fundacion.png" alt ="Error 404"  width="80%" height="25%"/></a>
-						</div>
-						</div>
-
-					<div class="col-sm-8">
-
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-								<li ><a><i></i>
-								 
-								<li ><a href="../Principales/cuenta.php" target="principal"><i class="fa fa-user"></i> Cuenta</a></li>
-								<li ><a href="../Principales/cargarImagenes.php" target="principal"><i class="fa fa-bookmark-o"></i> Administrar</a></li>
-			                    <li ><a href="#" onclick="Cerrar()"><i class="fa fa-lock"></i> Salir</a></li>
-							   
-								<li id="login"><a href="../Principales/login.php" target="principal"><i class="fa fa-unlock"></i> Login</a></li>
-							   
-								<li id="carrito"><a href="../Principales/cart.php" target="principal"><i class="fa fa-shopping-cart"></i>Carrito</a></li>
-
-								
-							</ul>
+							<a href="front.php"><img src="../../images/home/logo_fundacion.png" alt ="Error 404"  width="100%" height="25%"/></a>
 						</div>
 					</div>
-					<form id="cerrar" action = "../../Controladores/Usuarios/cCerrarSesion.php">
-					</form>
 				</div>
 			</div>
 		</div><!--/header-middle-->
@@ -75,19 +54,7 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="btn-group pull-right">
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									Moneda
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Dolar USD</a></li>
-									<li><a href="#">Pesos $</a></li>
-								</ul>
-							</div>
-						</div>
+						
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="front.php" class="active">Inicio</a></li>
@@ -109,11 +76,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Buscar"/>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div class="row2"></div><!--/header-bottom-->
@@ -136,15 +99,15 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +57 315 3525781</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@diseñarte.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +57 315 6624815</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@proniñez.com</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.facebook.com/felipe.bedoya.56"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
