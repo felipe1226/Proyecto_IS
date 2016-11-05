@@ -51,7 +51,7 @@
 							<td>Titulo:</td><td><input name="titulo"  id = "titulo" type="text" placeholder="Titulo" /></td>
 							<td>Profesional responsable:</td>
 							<td>
-								<select id="Profesional">
+								<select name="Profesional" id="Profesional">
 									<option>Doctor</option>
 									<option>Ingeniero</option>
 									<option>Colombia</option>
@@ -82,7 +82,7 @@
 						<tr>
 							<td>Responsable</td>
 							<td>
-								<select id="responsable">
+								<select name ="responsable" id="responsable">
 									<option>Doctor</option>
 									<option>Ingeniero</option>
 									<option>Colombia</option>
@@ -102,7 +102,7 @@
 							<td>
 								<ul class="user_info">
 									<li class="single_field">
-										<select id="clasificacion">
+										<select name="clasificacion" id="clasificacion">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>

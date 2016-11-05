@@ -15,10 +15,10 @@ private $bd;
         return $datos;
     }
 
-    function Registrar_Proyecto($codigo, $titulo, $descripcion, $alcance, , $presupuesto , $fecha_inicio , $fecha_final , $responsable , $codigo_comunidad , $codigo_tema ){
+    function Registrar_Proyecto($codigo, $titulo, $descripcion, $alcance, $presupuesto, $fecha_inicio, $fecha_final, $responsable, $codigo_comunidad ,$codigo_tema){
 
             $this->bd->conectar();
-            $this->bd->set_Consulta("INSERT INTO proyecto(codigo,titulo,descripcion,alcance, presupuesto, fechai, fechaf, responsable, cocomunidad, cotema,estado)
+            $this->bd->set_Consulta("INSERT INTO proyecto(codigo,titulo,descripcion,alcance,presupuesto, fechai, fechaf, responsable, cocomunidad, cotema, estado)
                                             VALUES( 
                                                     '".$codigo."',
                                                     '".$titulo."',
@@ -30,7 +30,7 @@ private $bd;
                                                     '".$responsable."',
                                                     '".$codigo_comunidad."',
                                                     '".$codigo_tema."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
              echo'<script>
                     alert("El proyecto de ha creado satisfactoriamente");
@@ -45,10 +45,10 @@ private $bd;
                                             VALUES( 
                                                     '".$codigo_tema."',
                                                     '".$descripcion_tema."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
     }
-    
+
     function Registrar_Objetivo($codigo_objetivo, $descripcion_objetivo, $clasificacion, $codigo){
 
             $this->bd->conectar();
@@ -58,7 +58,7 @@ private $bd;
                                                     '".$descripcion_objetivo."',
                                                     '".$clasificacion."',
                                                     '".$codigo."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
         
     }
@@ -73,11 +73,11 @@ private $bd;
                                                     '".$nombre_comunidad."',
                                                     '".$poblacion."',
                                                     '".$id_representante."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
     }
 
-    function Registrar_Representante($id_representante, $nombre_representante, $apellido_representante, $nac_representante, , $cel_representante , $ciudad_representante , $dir_representante){
+    function Registrar_Representante($id_representante, $nombre_representante, $apellido_representante, $nac_representante, $cel_representante , $ciudad_representante , $dir_representante){
 
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO representante(id,nombre,apellido,fnato, celular, ciudad, direccion,estado)
@@ -89,11 +89,11 @@ private $bd;
                                                     '".$cel_representante."',
                                                     '".$ciudad_representante."',
                                                     '".$dir_representante."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
     }
 
-    function Registrar_Infante($id_infante, $nombre_infante, $apellido_infante, $nac_infante, , $codigo_comunidad){
+    function Registrar_Infante($id_infante, $nombre_infante, $apellido_infante, $nac_infante, $codigo_comunidad){
 
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO infante(id,nombre,apellido, fnato, comunidad, estado)
@@ -103,11 +103,11 @@ private $bd;
                                                     '".$apellido_infante."',
                                                     '".$nac_infante."',
                                                     '".$codigo_comunidad."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
     }
 
-    function Registrar_Participan($codigo, $tiempo, $tarea, $Profesional){
+    function Registrar_Participa($codigo, $tiempo, $tarea, $Profesional){
 
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO participa(proyecto,tiempo,tarea,trabajador, estado)
@@ -116,7 +116,7 @@ private $bd;
                                                     '".$tiempo."',
                                                     '".$tarea."',
                                                     '".$Profesional."',
-                                                    'Activo',);");
+                                                    'Activo');");
             $this->bd->desconectar();
     }
 
