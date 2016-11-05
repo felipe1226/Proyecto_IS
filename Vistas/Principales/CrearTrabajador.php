@@ -19,6 +19,9 @@
 	<script src="../../Scripts/Trabajadores/Validar.js"> </script>
 
 	
+	
+
+	
 <body>
 	<section id="cart_items">
 		<div class="container">
@@ -50,17 +53,15 @@
 							<td>Fecha de Nacimiento</td><td><input name="fecha_nac"  id = "fecha_nac" type="text" placeholder="AAAA/MM/DD" /></td>
 							
 						<tr>
-							<td>Tipo de Trabajador</td><td>&nbsp;</td>
+							<td>Tipo de Trabajador:</td>
 						</tr>
                         <tr>
-                        <form action="demo_form.asp">
-  							<td><input type="checkbox" name="profesional" id="profesional" value="profesional">Profesional <br>&nbsp;</td>
-  							<td><input type="checkbox" name="areaadministrativa" id="aadministrativa" value="areaadministrativa" >Area Administrativa<br>&nbsp;</td>
-						</form>
-							<td>&nbsp;</td>
+	                        <td><input type="radio" name="trabajador" id="trabajador" value="profesional" />Profesional</td>
+							<td><input type="radio" name="trabajador" id="trabajador" value="administrativa" />Area administrativa
 						</tr>
 						<tr>
-							<td><select id="select1" >
+							<td>
+								<select name ="select1" id="select1" >
 		                            <option>Sicologo</option>
 									<option>Medico</option>
 									<option>Odontologo</option>
@@ -68,14 +69,16 @@
 		                            <option>Pedagogo</option>
 		                            <option>Etc</option>
                             
-						   		</select>
-						   	</td>
-							<td><select id="select2">
-                            <option>Secretaria</option>
-							<option>Servicio</option>
-							<option>generale</option>
-                            <option>Etc</option>
-						    </select></td>
+						    	</select>
+						    </td>
+							<td>
+								<select name="select2" id="select2">
+		                            <option>Secretaria</option>
+									<option>Servicio</option>
+									<option>generale</option>
+		                            <option>Etc</option>
+						    	</select>
+						    </td>
 						</tr>
 					</tbody>
 				</table>
@@ -88,11 +91,13 @@
 		</div>
 	</section>
 
-  <script src="../../js/jquery.js"></script>
+  	<script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.scrollUp.min.js"></script>
 	<script src="../../js/price-range.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>
     <script src="../../js/main.js"></script>
+    
+</script>
 </body>
 </html>
