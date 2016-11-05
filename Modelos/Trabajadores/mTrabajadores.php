@@ -15,7 +15,7 @@ private $bd;
         return $datos;
     }
 
-    function Crear_Trabajador($codigo, $nombre, $cantidad, $medida){
+    function Registrar_Trabajador($codigo, $nombre, $cantidad, $medida){
 
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO productos(codigo,nombre,cantidad,unidad_medida)
