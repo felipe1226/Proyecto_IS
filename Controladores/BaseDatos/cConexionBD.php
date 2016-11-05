@@ -8,7 +8,7 @@ class ConexionPostgres{
 	private $resultado;
 	
 	function ConexionPostgres(){
-		$this->url = "host='localhost' port='5432' dbname='productos' user='postgres' password='root'";
+		$this->url = "host='localhost' port='5432' dbname='FundacionProNiñez' user='postgres' password='root'";
 	}
 	
 	public function conectar(){ 
