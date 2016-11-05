@@ -32,40 +32,44 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Identificación:</td><td><input name="codigo"  id = "codigo" type="text" placeholder="Codigo" />
+							<td>Identificación:</td><td><input name="id"  id = "id" type="text" placeholder="Identificacion" />
                          </tr>
                          <tr>
-							<td>Nombre:</td><td><input name="titulo"  id = "titulo" type="text" placeholder="Titulo" />
+							<td>Nombre:</td><td><input name="nombre"  id = "nombre" type="text" placeholder="Nombre" />
                          </tr>
-							<td>Apellido:</td><td><input name="descripcion"  id = "descripcion" type="text" placeholder="Descripcion" /></td>
+							<td>Apellido:</td><td><input name="apellido"  id = "apellido" type="text" placeholder="Apellido" /></td>
 						</tr>
+						 <tr>
+							<td>Telefono:</td><td><input name="telefono"  id = "telefono" type="text" placeholder="Telefono" />
+                         </tr>
 						<tr>
 							<td>Salario :</td>
-						  <td><input name="Salario"  id ="Salario" type="text"  placeholder="$" /></td>
+						  <td><input name="salario"  id ="salario" type="text"  placeholder="$" /></td>
 						</tr>
 						<tr>
-							<td>Fecha de Nacimiento</td><td><input name="fecha_inicio"  id = "fecha_inicio" type="text" placeholder="AAAA/MM/DD" /></td>
+							<td>Fecha de Nacimiento</td><td><input name="fecha_nac"  id = "fecha_nac" type="text" placeholder="AAAA/MM/DD" /></td>
 							
 						<tr>
 							<td>Tipo de Trabajador</td><td>&nbsp;</td>
 						</tr>
                         <tr>
                         <form action="demo_form.asp">
-  							<td><input type="checkbox" name="profesional" value="profesional">Profesional <br>&nbsp;</td>
-  							<td><input type="checkbox" name="areaadministrativa" value="areaadministrativa" checked>Area Administrativa<br>&nbsp;</td>
+  							<td><input type="checkbox" name="profesional" id="profesional" value="profesional">Profesional <br>&nbsp;</td>
+  							<td><input type="checkbox" name="areaadministrativa" id="aadministrativa" value="areaadministrativa" >Area Administrativa<br>&nbsp;</td>
 						</form>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<td><select id="select1">
-                            <option>Sicologo</option>
-							<option>Medico</option>
-							<option>Odontologo</option>
-                            <option>Trabajador social</option>
-                            <option>Pedagogo</option>
-                            <option>Etc</option>
+							<td><select id="select1" >
+		                            <option>Sicologo</option>
+									<option>Medico</option>
+									<option>Odontologo</option>
+		                            <option>Trabajador social</option>
+		                            <option>Pedagogo</option>
+		                            <option>Etc</option>
                             
-						    </select></td>
+						   		</select>
+						   	</td>
 							<td><select id="select2">
                             <option>Secretaria</option>
 							<option>Servicio</option>

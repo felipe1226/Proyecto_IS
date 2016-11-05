@@ -2,6 +2,7 @@
 require_once("../../Controladores/BaseDatos/cConexionBD.php");
 
 class Trabajador
+
 {
 
 private $bd;
@@ -15,22 +16,52 @@ private $bd;
         return $datos;
     }
 
-    function Registrar_Trabajador($codigo, $nombre, $cantidad, $medida){
+    function Registrar_Trabajador($id, $nombre, $apellido, $telefono, $salario, $fecha_nac){
 
             $this->bd->conectar();
-            $this->bd->set_Consulta("INSERT INTO productos(codigo,nombre,cantidad,unidad_medida)
+            $this->bd->set_Consulta("INSERT INTO trabajador(id,nombre,apellido,telefono,fechanato, salario,estado)
                                             VALUES( 
-                                                    '".$codigo."',
+                                                    '".$id."',
                                                     '".$nombre."',
-                                                    '".$cantidad."',
-                                                    '".$medida."');");
+                                                    '".$apellido."',
+                                                    '".$telefono."',
+                                                    '".$fecha_nac."',
+                                                    '".$salario."',
+                                                    'Activo');");
             $this->bd->desconectar();
              echo'<script>
-                    alert("Creacion de producto Satisfactorio");
-                    top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
+                    alert("Trabajador registrado exitosamente");
+                    top.location.href="/Proyecto_IS/Vistas/Front/front.php";
                      </script>';
         
     }
+
+    function Registrar_Profesional($id, $select1){
+
+            $this->bd->conectar();
+            $this->bd->set_Consulta("INSERT INTO profesional(id,tipop,estado)
+                                            VALUES( 
+                                                    '".$id."',
+                                                    '".$select1."',
+                                                    'Activo');");
+            $this->bd->desconectar();
+           
+        
+    }
+
+    function Registrar_Administrativa($id, $select2){
+
+            $this->bd->conectar();
+            $this->bd->set_Consulta("INSERT INTO aadministrador(id,tipoa,estado)
+                                            VALUES( 
+                                                    '".$id."',
+                                                    '".$select2."',
+                                                    'Activo');");
+            $this->bd->desconectar();
+          
+    }
+
+
 
   function cargar_trabajador(){
         $this->bd->conectar();

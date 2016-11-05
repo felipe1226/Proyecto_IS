@@ -17,7 +17,12 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-     <script src="../../Scripts/Proyectos/Validar.js"> </script>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui-1.7.2.custom.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<script type="text/javascript"></script>
+	
+	<script src="../../Scripts/Proyectos/Validar.js"> </script>
+
 
 <body>
   <div class="signup-form"><!--sign up form-->
@@ -188,17 +193,22 @@
 				
 			</div>
 			<button id="boton" type="button" class="btn btn-default" onclick="validacion()">Crear Proyecto</button>
-		
+			<script src="../../js/calendario.js"></script>
+			<form action="">
+  				<label> Seleccionar Fecha:</label>
 
+  				<input type="text" name="datepicker" id="datepicker" readonly="readonly" size="12" />
+			</form>
 		</div>
 	</section>
 	</form>
-  <script src="../../js/jquery.js"></script>
+  	<script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.scrollUp.min.js"></script>
 	<script src="../../js/price-range.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>
     <script src="../../js/main.js"></script>
+    
     </div>
 </body>
 </html>
