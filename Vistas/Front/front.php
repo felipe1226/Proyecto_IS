@@ -80,10 +80,16 @@
                                           <li id="contactenos"><a href="../Principales/shop.php" target="principal">Contactenos</a></li>
                                     </ul>
                                 </li> 
+                                <li class="dropdown"><a href="#">Consultas<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
+                                         <li id="listas_trabajador"><a href="../Principales/shop.php" target="principal">Listar trabajadores</a></li>	
+                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Consultar trabajador</a></li>
+                                    </ul>
+                                </li> 
 							</ul>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 			<div class="row2"></div><!--/header-bottom-->
@@ -114,7 +120,7 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="https://www.facebook.com/felipe.bedoya.56"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.facebook.com/jorgemaldonad12?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
