@@ -1,4 +1,6 @@
 <?php 
+	require_once("../../Modelos/Trabajadores/mTrabajadores.php");
+	$trabajador = new Trabajador();
 	
  ?>
 <html lang="en">
@@ -51,10 +53,15 @@
 							<td>Titulo:</td><td><input name="titulo"  id = "titulo" type="text" placeholder="Titulo" /></td>
 							<td>Profesional responsable:</td>
 							<td>
+
 								<select name="Profesional" id="Profesional">
-									<option>Doctor</option>
-									<option>Ingeniero</option>
-									<option>Colombia</option>
+								 	<option>--Profesional--</option>
+									<?php 
+										$trabajador->Cargar_Profesional();
+		                               	while($id = $trabajador->datos()){
+											echo "<option>".$id[0]."</option>";
+										}
+									?>
 								</select>
 							</td>
 							
@@ -83,9 +90,13 @@
 							<td>Responsable</td>
 							<td>
 								<select name ="responsable" id="responsable">
-									<option>Doctor</option>
-									<option>Ingeniero</option>
-									<option>Colombia</option>
+									<option>--Area Administrativa--</option>
+								<?php 
+										$trabajador->Cargar_Administrativo();
+		                               	while($id = $trabajador->datos()){
+											echo "<option>".$id[0]."</option>";
+										}
+								?>
 								</select>
 							</td>
 							<td>Codigo:</td><td><input name="codigo_objetivo"  id = "codigo_objetivo" type="text" placeholder="Codigo" /></td>

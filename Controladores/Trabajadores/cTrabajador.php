@@ -14,7 +14,7 @@ $trabajador = new Trabajador();
             );
 
 
-   	if (isset($_POST['profesional']) ){
+   	if (($_POST['trabajador'])=="profesional" ){
       	$trabajador->Registrar_Profesional( $_POST['id'],
                                				$_POST['select1']
             );

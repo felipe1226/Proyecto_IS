@@ -73,6 +73,13 @@
                                           <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Consultar trabajador</a></li>
                                     </ul>
                                 </li> 
+                                <li class="dropdown"><a href="#">¿Quienes somos?<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li id="mision"><a href="../Principales/CrearTrabajador.php" target="principal">Mision</a></li>	
+                                         <li id="vision"><a href="../Principales/shop.php" target="principal">Vision</a></li>	
+                                          <li id="contactenos"><a href="../Principales/shop.php" target="principal">Contactenos</a></li>
+                                    </ul>
+                                </li> 
 							</ul>
 						</div>
 					</div>

@@ -149,7 +149,29 @@ function validacion(){
                                                                                                                                             alerts("La direccion es obligatoria para el registro del proyecto", "Campo Vacio");
                                                                                                                                         }
                                                                                                                                         else{
-                                                                                                                                            document.getElementById("crearProyecto").submit();
+                                                                                                                                            if($("#responsable").val() === "--Area Administrativa--"){
+                                                                                                                                                $("#responsable").focus();
+                                                                                                                                                alerts("El responsable es obligatorio para el registro del proyecto", "Campo Vacio");
+                                                                                                                                            }
+                                                                                                                                            else{
+                                                                                                                                                if($("#Profesional").val() === "--Area Administrativa--"){
+                                                                                                                                                    $("#Profesional").focus();
+                                                                                                                                                    alerts("El profesional responsable es obligatorio para el registro del proyecto", "Campo Vacio");
+                                                                                                                                                }
+                                                                                                                                                else{
+
+                                                                                                                                                    if($("#poblacion").val() === ""){
+                                                                                                                                                        $("#poblacion").focus();
+                                                                                                                                                        alerts("La poblacion es obligatoria para el registro del proyecto", "Campo Vacio");
+                                                                                                                                                    }
+                                                                                                                                                    else{
+                                                                                                                                                        validarSiNumero($("#poblacion").val());
+                                                                                                                                                        if(cent==0){
+                                                                                                                                                            document.getElementById("crearProyecto").submit();
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            }
                                                                                                                                         }
                                                                                                                                     }
                                                                                                                                 }

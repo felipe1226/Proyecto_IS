@@ -63,10 +63,28 @@ private $bd;
 
 
 
-  function cargar_trabajador(){
+    function Cargar_Trabajador(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
+        $consulta = $this->bd->set_Consulta("SELECT id_trabajador,codigo,nombre,cantidad,unidad_medida
                                             FROM productos;");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+    function Cargar_Administrativo(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT id
+                                            FROM aadministrador 
+                                            WHERE estado = 'Activo'");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+    function Cargar_Profesional(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT id
+                                            FROM profesional
+                                            WHERE estado = 'Activo'");
         $this->bd->desconectar();
         return $consulta;
     }
