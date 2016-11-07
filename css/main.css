@@ -304,7 +304,7 @@ a#scrollUp i{
   font-weight: 300;
   height: 35px;
   outline: medium none;
-  padding-left: 10px;
+  padding-left: px;
   width: 155px;
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
@@ -639,6 +639,21 @@ ul.sub-menu {
 
 .girl {
   margin-left: 0;
+}
+
+.consulta{
+  padding-left: 100px;
+}
+
+.consulta h1 {
+  color: #B4B1AB;
+  font-family: abel;
+  font-size: 48px;
+  margin-top: 115px;
+}
+
+.consulta h1 span {
+  color:#007f76;
 }
 
 .item h1 {
@@ -1338,6 +1353,17 @@ h2.title {
   font-size: 15px;
   margin-bottom: 10px;
   margin-left: 20px;
+}
+
+.cart h1 {
+  color: #B4B1AB;
+  font-family: abel;
+  font-size: 48px;
+  margin-top: 115px;
+}
+
+.cart h1 span {
+  color:#007f76;
 }
 
 

@@ -24,7 +24,6 @@
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 
     <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>
-    <script src="../../Scripts/Usuarios/CerrarSesion.js"> </script>	
 </head><!--/head-->
 
 <body class ="body-front">
@@ -70,7 +69,7 @@
                                     <ul role="menu" class="sub-menu">
                                         <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
                                          <li id="listas_trabajador"><a href="../Principales/shop.php" target="principal">Listar trabajadores</a></li>	
-                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Consultar trabajador</a></li>
+                                          <li id="consultar_trabajador"><a href="../Principales/consultarTrabajador.php" target="principal">Consultar trabajador</a></li>
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">¿Quienes somos?<i class="fa fa-angle-down"></i></a>

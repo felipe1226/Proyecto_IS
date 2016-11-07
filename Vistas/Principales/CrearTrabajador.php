@@ -26,6 +26,7 @@
 	<section id="cart_items">
 		<div class="container">
 			<div class="table-responsive cart_info">
+			<div class="signup-form"><!--sign up form-->
 			  <form id ="registrarTrabajador" method="POST" action="/Proyecto_IS/Controladores/Trabajadores/cTrabajador.php">
 				<table class="table table-condensed">
 					<thead>
@@ -86,6 +87,7 @@
 					<button id="boton" type="button" class="btn btn-default" onclick="validacion()">Registrar trabajador</button>
 
 			</form>
+			</div>
 		
 			</div>
 		</div>

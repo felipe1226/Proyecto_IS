@@ -1,4 +1,5 @@
 <?php 
+	require_once("../../Scripts/phpScripts/calendar.php");
 	require_once("../../Modelos/Trabajadores/mTrabajadores.php");
 	$trabajador = new Trabajador();
 	
@@ -77,7 +78,7 @@
 							
 						</tr>
 						<tr>
-							<td>Fecha de inicio</td><td><input name="fecha_inicio"  id = "fecha_inicio" type="text" placeholder="AAAA/MM/DD" /></td>
+						 	<td>Fecha de inicio:</td><td><input name="fecha_inicio"  id = "fecha_inicio" type="text" placeholder="AAAA/MM/DD" /></td>
 							<td>Descripcion:</td><td><input name="descripcion_tema"  id = "descripcion_tema" type="text" placeholder="Descripcion" /></td>
 							
 						</tr>
@@ -204,12 +205,7 @@
 				
 			</div>
 			<button id="boton" type="button" class="btn btn-default" onclick="validacion()">Crear Proyecto</button>
-			<script src="../../js/calendario.js"></script>
-			<form action="">
-  				<label> Seleccionar Fecha:</label>
-
-  				<input type="text" name="datepicker" id="datepicker" readonly="readonly" size="12" />
-			</form>
+			
 		</div>
 	</section>
 	</form>

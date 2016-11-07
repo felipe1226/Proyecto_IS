@@ -65,7 +65,7 @@ private $bd;
 
     function Cargar_Trabajador(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT id_trabajador,codigo,nombre,cantidad,unidad_medida
+        $consulta = $this->bd->set_Consulta("SELECT id,nombre,apellido,telefono,fechanato, salario
                                             FROM productos;");
         $this->bd->desconectar();
         return $consulta;
@@ -90,50 +90,57 @@ private $bd;
     }
     
 
-    function consultar_trabajador($rdato, $dato){
+    function consultar_trabajador($ID){
 
-        if($rdato== "codigo"){
             $this->bd->conectar();
-            $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
-                                                FROM productos
-                                                WHERE codigo = '".$dato."'");
+            $consulta = $this->bd->set_Consulta("SELECT id,nombre,apellido,telefono, fechanato, salario
+                                                FROM trabajador
+                                                WHERE estado = 'Activo' AND id = '".$ID."'");
             $this->bd->desconectar();
-        }
-        else{
-            $this->bd->conectar();
-            $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
-                                                FROM productos
-                                                WHERE nombre = '".$dato."'");
-            $this->bd->desconectar();
-        }
+        
+        
         return $consulta;
     }
 
-     function actualizar_trabajador($id, $codigo, $nombre, $cantidad, $medida){
+    function actualizar_trabajador($id, $nombre, $apellido, $telefono, $fecha_nac, $salario){
         $this->bd->conectar();
-            $this->bd->set_Consulta("UPDATE productos SET  codigo = '".$codigo."',
-                                                                nombre = '".$nombre."',
-                                                                cantidad = '".$cantidad."',
-                                                                unidad_medida = '".$medida."'
-                                        WHERE id_codigo = ".$id."");
+            $this->bd->set_Consulta("UPDATE trabajador SET  nombre = '".$nombre."',
+                                                            apellido = '".$apellido."',
+                                                            telefono = '".$telefono."',
+                                                            fechanato = '".$fecha_nac."',
+                                                            salario = '".$salario."' 
+                                                WHERE id=".$id."");
             $this->bd->desconectar();
 
         echo'  <script>
-                alert("Actualizacion de Producto Exitosa!");
-                top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
+                alert("Se ha modificado los datos del trabajador exitosamente!");
+                top.location.href="/Proyecto_IS/Vistas/Front/Front.php";
                 </script>';
     }
 
-    function eliminar_trabajador($id){
+
+     function eliminar_trabajador($id){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("DELETE  FROM productos
-                                                WHERE id_codigo = ".$id.";");
-        $this->bd->desconectar();
-         echo'  <script>
-                alert("Eliminacion de Producto Exitosa!");
-                top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
+            $this->bd->set_Consulta("UPDATE trabajador SET  estado = 'No Activo'
+                                                WHERE id =".$id."");
+            $this->bd->desconectar();
+
+        echo'  <script>
+                alert("Se ha dado de baja al trabajador exitosamente!");
+                top.location.href="/Proyecto_IS/Vistas/Front/Front.php";
                 </script>';
     }
+
+   /* function eliminar_trabajador($id){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("DELETE  FROM trabajador
+                                                WHERE id = ".$id.";");
+        $this->bd->desconectar();
+         echo'  <script>
+                alert("Se ha dado de baja al trabajador exitosamente!");
+                top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
+                </script>';
+    }*/
 
 }
 

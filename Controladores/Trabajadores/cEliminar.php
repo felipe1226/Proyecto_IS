@@ -1,10 +1,10 @@
 <?php
 
-require_once("../../Modelos/Productos/mProducto.php");
+require_once("../../Modelos/Trabajadores/mTrabajadores.php");
 
-$producto = new Producto();
+$trabajador = new Trabajador();
 
 
-    $producto->eliminar_Producto(  $_POST['id']
+    $trabajador->eliminar_trabajador( $_POST['identificacion']
             );
 ?>

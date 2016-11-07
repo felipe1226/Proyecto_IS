@@ -38,7 +38,6 @@
 <body>
 	<section id="form2"><!--form-->
 		<?php 
-			   if($_SESSION['usuario']){
 					if($dato->existe_Usuario($_SESSION['usuario'])){
 						if($user->cargar_nombre_Usuario($_SESSION['usuario'])){
 							if($tupla1 = $user->datos()){
@@ -46,7 +45,7 @@
 									<div class="col-sm-4 col-sm-offset-1">
 									<div class="login-form"><!--login form-->
 										<h2>Datos Personales</h2>
-										<form id="vinculacion" method="POST" action="../../Controladores/Usuarios/	cActualizacionDatos.php">
+										<form id="vinculacion" method="POST" action="../../Controladores/Usuarios/cActualizacionDatos.php">
 											<p>Nombre:</p><input type="text" id="nombre" name="nombre" size="30" value="'.$tupla1[0].'"/>';
 							}
 						
