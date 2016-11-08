@@ -65,8 +65,8 @@ private $bd;
 
     function Cargar_Trabajador(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT id,nombre,apellido,telefono,fechanato, salario
-                                            FROM productos;");
+        $consulta = $this->bd->set_Consulta("SELECT id
+                                            FROM trabajador;");
         $this->bd->desconectar();
         return $consulta;
     }

@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -26,22 +25,23 @@
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 
 
-    <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>	
-    <script src="../../Scripts/Carrito/Carrito.js"> </script>						
+    <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>						
 </head><!--/head-->
 	<section id="cart_items">
 		<div class="container">
 			<div class="item active">
-				<form id ="consultarTrabajador" method="POST" action="/Proyecto_IS/Vistas/Principales/ActualizarTrabajador.php">
-					<h1><span>C</span>onsultar <span>T</span>rabajador</h1>
+				<form id ="consultarProyecto" method="POST" action="/Proyecto_IS/Vistas/Principales/ActualizarProyecto.php">
+					<h1><span>C</span>onsultar <span>P</span>royecto</h1>
 					<div class="search_box">
-						<input type="text" name="consulta" id="consulta" placeholder="ingrese ID"/>
+						<input type="text" name="consulta" id="consulta" placeholder="ingrese codigo"/>
 					</div>
+
+
 				</form>
-			</div>		
+			</div>
 		</div>
 	</section>
-	
+
 	<script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>

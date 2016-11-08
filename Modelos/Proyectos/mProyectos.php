@@ -33,7 +33,7 @@ private $bd;
                                                     'Activo');");
             $this->bd->desconectar();
              echo'<script>
-                    alert("El proyecto de ha creado satisfactoriamente");
+                    alert("El proyecto de ha creado exitosamente");
                     top.location.href="/Proyecto_IS/Vistas/Front/front.php";
                      </script>';
     }
@@ -110,13 +110,12 @@ private $bd;
     function Registrar_Participa($codigo, $tiempo, $tarea, $Profesional){
 
             $this->bd->conectar();
-            $this->bd->set_Consulta("INSERT INTO participa(proyecto,tiempo,tarea,trabajador, estado)
+            $this->bd->set_Consulta("INSERT INTO participa(proyecto,tiempo,tarea,trabajador)
                                             VALUES( 
                                                     '".$codigo."',
                                                     '".$tiempo."',
                                                     '".$tarea."',
-                                                    '".$Profesional."',
-                                                    'Activo');");
+                                                    '".$Profesional."';");
             $this->bd->desconectar();
     }
 
@@ -129,41 +128,48 @@ private $bd;
     }
     
 
-    function consultar_Proyecto($rdato, $dato){
+    function consultar_proyecto($codigo){
 
-        if($rdato== "codigo"){
-            $this->bd->conectar();
-            $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
-                                                FROM productos
-                                                WHERE codigo = '".$dato."'");
-            $this->bd->desconectar();
-        }
-        else{
-            $this->bd->conectar();
-            $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
-                                                FROM productos
-                                                WHERE nombre = '".$dato."'");
-            $this->bd->desconectar();
-        }
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT codigo,titulo,descripcion,alcance,presupuesto, fechai, fechaf, responsable, cocomunidad, cotema
+                                                FROM proyecto
+                                                WHERE estado = 'Activo' AND codigo = '".$codigo."'");
+        $this->bd->desconectar();
+        
         return $consulta;
     }
 
-     function actualizar_Proyecto($id, $codigo, $nombre, $cantidad, $medida){
+    function actualizar_Proyecto($codigo, $titulo, $descripcion, $alcance, $presupuesto, $fechai, $fechaf, $responsable){
         $this->bd->conectar();
-            $this->bd->set_Consulta("UPDATE productos SET  codigo = '".$codigo."',
-                                                                nombre = '".$nombre."',
-                                                                cantidad = '".$cantidad."',
-                                                                unidad_medida = '".$medida."'
-                                        WHERE id_codigo = ".$id."");
+            $this->bd->set_Consulta("UPDATE proyecto SET  titulo = '".$titulo."',
+                                                                descripcion = '".$descripcion."',
+                                                                alcance = '".$alcance."',
+                                                                presupuesto = '".$presupuesto."',
+                                                                fechai = '".$fechai."',
+                                                                fechaf = '".$fechaf."',
+                                                                responsable = '".$responsable."'
+                                        WHERE codigo = ".$codigo."");
             $this->bd->desconectar();
 
         echo'  <script>
                 alert("Actualizacion de Producto Exitosa!");
-                top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
+                top.location.href="/Proyecto_IS/Vistas/Front/front.php";
                 </script>';
     }
 
-    function eliminar_Proyecto($id){
+    function eliminar_Proyecto($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'No activo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+        echo'  <script>
+                alert("Se ha eliminado el proyecto exitosamente!");
+                top.location.href="/Pryecto_IS/Vistas/Front/front.php";
+                </script>';
+    }
+
+    /*function eliminar_Proyecto($id){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("DELETE  FROM productos
                                                 WHERE id_codigo = ".$id.";");
@@ -172,7 +178,7 @@ private $bd;
                 alert("Eliminacion de Producto Exitosa!");
                 top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
                 </script>';
-    }
+    }*/
 
 }
 

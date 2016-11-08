@@ -156,7 +156,19 @@ function validacion(){
                                                                                                                                                     alerts("La direccion es obligatoria para el registro del proyecto", "Campo Vacio");
                                                                                                                                                 }
                                                                                                                                                 else{
-                                                                                                                                                    document.getElementById("crearProyecto").submit();
+                                                                                                                                                    if($("#responsable").val() === "--Area Administrativa--"){
+                                                                                                                                                    $("#responsable").focus();
+                                                                                                                                                    alerts("El trabajador responsable es obligatorio para el registro del proyecto", "Campo Vacio");
+                                                                                                                                                    }
+                                                                                                                                                    else{
+                                                                                                                                                        if($("#profesional").val() === "--Profesional--"){
+                                                                                                                                                            $("#profesional").focus();
+                                                                                                                                                            alerts("El profesional responsable es obligatorio para el registro del proyecto", "Campo Vacio");
+                                                                                                                                                        }
+                                                                                                                                                        else{
+                                                                                                                                                            document.getElementById("crearProyecto").submit();
+                                                                                                                                                        }
+                                                                                                                                                    }
                                                                                                                                                 }
                                                                                                                                             }
                                                                                                                                         }

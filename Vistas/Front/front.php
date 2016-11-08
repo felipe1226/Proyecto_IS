@@ -61,7 +61,7 @@
                                     <ul role="menu" class="sub-menu">
                                         <li id="crear_proyecto"><a href="../Principales/CrearProyecto.php" target="principal">Crear proyecto</a></li>	
                                         <li id="listar_proyectos"><a href="../Principales/shop.php" target="principal">Listar Proyectos</a></li>
-                                         <li id="consultar_proyectos"><a href="../Principales/shop.php" target="principal">Consultar proyectos</a></li>	
+                                         <li id="consultar_proyectos"><a href="../Principales/consultarProyecto.php" target="principal">Consultar proyecto</a></li>	
                                           
                                     </ul>
                                 </li> 
