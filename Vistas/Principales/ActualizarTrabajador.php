@@ -33,6 +33,7 @@
                             $cantidad = pg_num_rows($consulta);
                                 if($cantidad>0){
                                 	$info = $trabajador->datos();
+
 			 							 echo '<div class="signup-form"><!--sign up form-->
 			 							 	<form id ="registrarTrabajador" method="POST" action="/Proyecto_IS/Controladores/Trabajadores/cActualizar.php">
 												<table class="table table-condensed">
@@ -57,22 +58,24 @@
 													</tr>
 													<tr>
 														<td>Fecha de Nacimiento</td><td><input name="fecha_nac"  id = "fecha_nac" type="text" value="'.$info[4].'" /></td>';
-												    $tipot=$trabajador->Cargar_Profesional($_POST['consulta'])
-												    $cantidad = pg_num_rows($tipot);
-												    if($cantidad>0){
-                                						$tipo = $trabajador->datos();
-                                						$trab = "Profesional";
-                                					}
-                                					else{
-                                						 $tipot=$trabajador->Cargar_Administrativo($_POST['consulta'])
-                                						 $cantidad = pg_num_rows($tipot);
-                                						 if($cantidad>0){
-                                							$tipo = $trabajador->datos();
-                                							$trab = "Area administrativa";
-                                						}
-                                					}
+
+														$tipot=$trabajador->consultar_profesional($_POST['consulta']);
+													    $cantidad = pg_num_rows($tipot);
+													    if($cantidad>0){
+	                                						$tipo = $trabajador->datos();
+	                                						$trab = "Profesional";
+	                                					}
+	                                					else{
+	                                						 $tipot=$trabajador->consultar_administrativo($_POST['consulta']);
+	                                						 $cantidad = pg_num_rows($tipot);
+	                                						 if($cantidad>0){
+	                                							$tipo = $trabajador->datos();
+	                                							$trab = "Area administrativa";
+	                                						}
+	                                					}
+												    
 													echo '<tr>
-														<td>Tipo de Trabajador: '.$tipo[0].'" /><td>'.$trab.'
+														<td>Tipo de Trabajador: '.$tipo[0].'"</td><td>'.$trab.'
 													</tr>
 
 													</tbody>
@@ -98,7 +101,7 @@
 								}
 				        }
 				            
-						?>
+				?>
 			</div>
 		</div>
 	</section>

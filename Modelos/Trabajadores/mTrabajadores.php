@@ -102,6 +102,33 @@ private $bd;
         return $consulta;
     }
 
+    function consultar_administrativo($ID){
+
+            $this->bd->conectar();
+            $consulta = $this->bd->set_Consulta("SELECT tipoa
+                                                FROM aadministrador
+                                                WHERE id = '".$ID."'");
+            $this->bd->desconectar();
+        
+        
+        return $consulta;
+    }
+
+
+     function consultar_profesional($ID){
+
+            $this->bd->conectar();
+            $consulta = $this->bd->set_Consulta("SELECT tipop
+                                                FROM profesional
+                                                WHERE id = '".$ID."'");
+            $this->bd->desconectar();
+        
+        
+        return $consulta;
+    }
+
+
+
     function actualizar_trabajador($id, $nombre, $apellido, $telefono, $fecha_nac, $salario){
         $this->bd->conectar();
             $this->bd->set_Consulta("UPDATE trabajador SET  nombre = '".$nombre."',

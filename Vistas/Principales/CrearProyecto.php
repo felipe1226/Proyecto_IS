@@ -228,7 +228,7 @@
 			}
 			else{
 				echo '<td class="cart_description" align="center">
-						<h3><p align="center">¡Se requiere de trabajadores para crear un proyecto. Por favor haga el registro de trabajadores!</p></h3>
+						<h3><p align="center">¡Se requiere de trabajadores para crear un proyecto. Por favor haga el registro de trabajadores!</p></h3><br>
 							<div class="signup-form"><!--sign up form-->
 								<form name="registrar" id="registrar" method="POST" action="crearTrabajador.php">
 									<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Registrar trabajadores</button>
