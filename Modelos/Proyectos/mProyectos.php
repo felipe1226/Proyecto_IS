@@ -177,7 +177,13 @@ private $bd;
     }
     function responsablexproyecto($codigo){
         $this->bd->conectar();
-            $this->bd->set_Consulta("Select nombre,Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='activo'");
+            $this->bd->set_Consulta("SELECT nombre,Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function proyectoxresponsable($id_representante){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("SELECT codigo,titulo,descripcion from proyecto where responsable='"+ plan +"'and estado='activo' ");
             $this->bd->desconectar();
             return $consulta;
     }
