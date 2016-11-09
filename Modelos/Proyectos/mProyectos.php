@@ -168,6 +168,13 @@ private $bd;
                 top.location.href="/Pryecto_IS/Vistas/Front/front.php";
                 </script>';
     }
+    function ListarXComunidadProyecto($codigo_comunidad){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("SELECT CODIGO, TITULO, DESCRIPCION, ALCANCE, PRESUPUESTO, FECHAI, FECHAF, RESPONSABLE from proyecto where COCOMUNIDAD = '"+ plan +"'and estado='activo'" );
+            $this->bd->desconectar();
+            return $consulta;
+
+    }
 
     /*function eliminar_Proyecto($id){
         $this->bd->conectar();
