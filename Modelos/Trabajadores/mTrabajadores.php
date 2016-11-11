@@ -148,7 +148,7 @@ private $bd;
 
      function eliminar_trabajador($id){
         $this->bd->conectar();
-            $this->bd->set_Consulta("UPDATE trabajador SET  estado = 'No Activo'
+            $this->bd->set_Consulta("UPDATE trabajador SET  estado = 'Inactivo'
                                                 WHERE id =".$id."");
             $this->bd->desconectar();
 
@@ -156,6 +156,22 @@ private $bd;
                 alert("Se ha dado de baja al trabajador exitosamente!");
                 top.location.href="/Proyecto_IS/Vistas/Front/Front.php";
                 </script>';
+    }
+
+    function eliminar_administrativo($id){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE aadministrador SET  estado = 'Inactivo'
+                                                WHERE id =".$id."");
+            $this->bd->desconectar();
+
+    }
+
+    function eliminar_profesional($id){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE profesional SET  estado = 'Inactivo'
+                                                WHERE id =".$id."");
+            $this->bd->desconectar();
+
     }
 
    /* function eliminar_trabajador($id){

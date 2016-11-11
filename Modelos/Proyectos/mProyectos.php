@@ -159,7 +159,7 @@ private $bd;
 
     function eliminar_Proyecto($codigo){
         $this->bd->conectar();
-            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'No activo'
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
                                         WHERE codigo = ".$codigo."");
             $this->bd->desconectar();
 

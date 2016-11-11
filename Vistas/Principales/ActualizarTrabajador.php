@@ -75,6 +75,8 @@
 	                                					}
 												    
 													echo '<tr>
+
+							                         
 														<td>Tipo de Trabajador: '.$tipo[0].'"</td><td>'.$trab.'
 													</tr>
 
@@ -85,6 +87,7 @@
 
 												<form name="eliminarTrabajador" id="eliminarTrabajador" method="POST" action="../../Controladores/Trabajadores/cEliminar.php">
 													<input name="identificacion" id = "identificacion" type="hidden" value="'.$info[0].'"/>
+													<input   name="ttrabajador"  id = "ttrabajador" type="hidden" value="'.$trab.'" />
 													<a class="btn btn-default update" onclick="eliminar()">Eliminar trabajador</a>
 												</form>
 												</div>';
