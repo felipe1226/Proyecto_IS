@@ -239,6 +239,48 @@ private $bd;
             $this->bd->desconectar();
             return $consulta;
     }
+    function proyectoxevaluacioninferior($valor){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("Select proyecto.codigo,titulo,proyecto.descripcion,objetivo.valor from proyecto,objetivo where objetivo.coproyecto=proyecto.codigo and valor<'"+ plan +"' ");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function objetivoevaluacionxproyecto($codigo_comunidad){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("Select descripcion,valor from objetivo where coproyecto='"+ plan +"' and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function listarxniñocomunidad($codigo_objetivo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("Select * from infante where comunidad='"+ plan +"' and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function profesionalesxespecializacion($nombre_representante){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("select nombre,apellido,telefono from trabajador,profesional where especializacion='"+plan+"' and profesional.id=trabajador.id ");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function actualizarpresupuesto($coproyecto){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("SELECT * from proyecto where CODIGO = '" + cod + "'and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function listarxfecha($fechai){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("Select proyecto.codigo,titulo,proyecto.descripcion from proyecto where fechai='"+plan+"'and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+    function actualizarsalario($trabajador){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("SELECT * from trabajador where estado='activo' ");
+            $this->bd->desconectar();
+            return $consulta;
+    }
 
     /*function eliminar_Proyecto($id){
         $this->bd->conectar();
