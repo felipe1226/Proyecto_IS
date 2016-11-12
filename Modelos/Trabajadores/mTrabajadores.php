@@ -61,6 +61,16 @@ private $bd;
           
     }
 
+     function listar_trabajador(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT *
+                                            FROM trabajador,aadministrador, profesional
+                                            WHERE trabajador.estado = 'Activo'" AND ());
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+
     
 
 

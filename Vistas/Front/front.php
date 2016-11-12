@@ -68,7 +68,7 @@
                                 <li class="dropdown"><a href="#">Trabajadores<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
-                                         <li id="listas_trabajador"><a href="../Principales/shop.php" target="principal">Listar trabajadores</a></li>	
+                                         <li id="listas_trabajador"><a href="../Principales/ListarTrabajador" target="principal">Listar trabajadores</a></li>	
                                           <li id="consultar_trabajador"><a href="../Principales/consultarTrabajador.php" target="principal">Consultar trabajador</a></li>
                                     </ul>
                                 </li> 

@@ -75,10 +75,16 @@
 	                                					}
 												    
 													echo '<tr>
-
-							                         
-														<td>Tipo de Trabajador: '.$tipo[0].'"</td><td>'.$trab.'
+														<td>Tipo: </td><td> '.$tipo[0].'</td>
+														
 													</tr>
+													<tr>
+														<td>Cargo: </td>
+														<td>'.$trab.'
+														</td>
+													</tr>
+
+
 
 													</tbody>
 												</table>
