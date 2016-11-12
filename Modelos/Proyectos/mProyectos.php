@@ -168,6 +168,57 @@ private $bd;
                 top.location.href="/Pryecto_IS/Vistas/Front/front.php";
                 </script>';
     }
+
+    function eliminar_Tema($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+      
+    }
+    function eliminar_Objetivo($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+      
+    }
+    function eliminar_Comunidad($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+      
+    }
+    function eliminar_Representante($com){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE representante SET  estado = 'Inactivo'
+                                        WHERE id = (SELECT representante 
+                                                    FROM comunidad 
+                                                    WHERE codigo = ".$com.")");
+            $this->bd->desconectar();
+
+    }
+    function eliminar_Infante($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+        
+    }
+    function eliminar_Participa($codigo){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE proyecto SET  estado = 'Inactivo'
+                                        WHERE codigo = ".$codigo."");
+            $this->bd->desconectar();
+
+    }
+
+
     function ListarXComunidadProyecto($codigo_comunidad){
         $this->bd->conectar();
             $this->bd->set_Consulta("SELECT CODIGO, TITULO, DESCRIPCION, ALCANCE, PRESUPUESTO, FECHAI, FECHAF, RESPONSABLE from proyecto where COCOMUNIDAD = '"+ plan +"'and estado='activo'" );

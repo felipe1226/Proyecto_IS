@@ -77,6 +77,8 @@
 												
 												<form name="eliminarProyecto" id="eliminarProyecto" method="POST" action="../../Controladores/Proyectos/cEliminar.php">
 													<input name="codigo" id = "codigo" type="hidden" value="'.$info[0].'"/>
+													<input name="tem" id = "tem" type="hidden" value="'.$info[9].'"/>
+													<input name="com" id = "com" type="hidden" value="'.$info[8].'"/>
 													<a class="btn btn-default update" onclick="eliminar()">Eliminar proyecto</a>
 												</form>
 												</div>';
