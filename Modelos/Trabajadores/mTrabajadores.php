@@ -61,6 +61,7 @@ private $bd;
           
     }
 
+    
 
 
     function Cargar_Trabajador(){
