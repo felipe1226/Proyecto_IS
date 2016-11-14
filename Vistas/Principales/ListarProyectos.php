@@ -1,6 +1,6 @@
 <?php 
-	require_once("../../Modelos/Trabajadores/mTrabajadores.php");
-	$trabajador = new Trabajador();
+	require_once("../../Modelos/Proyectos/mProyectos.php");
+	$proyecto = new Proyecto();
  ?>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Listar Trabajadores | Fundacion Pro Niñez</title>
+    <title>Listar Proyectos | Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Trabajadores/actualizar.js"> </script>
+	<script src="../../Scripts/Proyectos/actualizar.js"> </script>
 
 	
 
@@ -29,28 +29,32 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE TRABAJADORES</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
-							<td class="image">ID</td>
-							<td class="description">NOMBRE</td>
-							<td class="description">APELLIDO</td>
-							<td class="description">TELEFONO</td>
-							<td class="description">FECHA NACIMIENTO</td>
-							<td class="description">SALARIO</td>
+							<td class="image">CODIGO</td>
+							<td class="description">TITULO</td>
+							<td class="description">DESCRIPCION</td>
+							<td class="description">ALCANCE</td>
+							<td class="description">PRESUPUESTO</td>
+							<td class="description">FECHA INICIO</td>
+							<td class="description">FECHA FINALIZACION</td>
+							<td class="description">RESPONSABLE</td>
+							<td class="description">COMUNIDAD</td>
+							<td class="description">TEMA</td>
 							<td class="description"></td>
 						</tr>
 					</thead>
 					<tbody>
 
 						<?php 
-							if($consulta = $trabajador->listar_trabajador()){
+							if($consulta = $proyecto->listar_proyecto()){
 								
                                  $cantidad = pg_num_rows($consulta);
 
                                  for($i=0;$i< $cantidad; $i++){
-                                 	$campos = $trabajador->datos();
+                                 	$campos = $proyecto->datos();
                                     
 									echo "
 									<tr>
@@ -65,28 +69,35 @@
 										<td class='cart_description'>".$campos[4]."</td>
 
 										<td class='cart_description'>".$campos[5]."</td>
+										
+										<td class='cart_description'>".$campos[6]."</td>
+										
+										<td class='cart_description'>".$campos[7]."</td>
+										
+										<td class='cart_description'>".$campos[8]."</td>
+										
+										<td class='cart_description'>".$campos[9]."</td>
+										
 										<td class='cart_delete'>
-											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar trabajador'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarTrabajador.php'>
-															<input name='consulta' id = 'consulta' type='hidden' value='".$campos[0]."'/>
+											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarProy(this.id)'><i class='fa fa-bookmark-o' title='Actualizar proyecto'></i></a>
+											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarProyecto.php'>
+													<input name='consulta' id='consulta' type='hidden' value='".$campos[0]."'/>
 											</form>
 										</td>
-									</tr>";
-
-						
+										</tr>";
 								}
 
 								if($cantidad == 0)
 								{
 									echo "
 											<td class='cart_description' align='center'>
-											<p align='center'>¡No hay trabajadores en la base de datos!</p>
+											<p align='center'>¡No hay proyectos en la base de datos!</p>
 											</td>
 									";
 								}
 
 							}
- 						?>
+	 					?>
 						
 					</tbody>
 				</table>

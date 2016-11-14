@@ -49,6 +49,11 @@ function eliminar()
 }
 
 
+function actualizarProy(id)
+{
+    document.getElementById("actualizar"+id).submit();
+}
+
 function validarSiNumero(numero){
     cent=0;
     if (!/^([0-9])*$/.test(numero)){

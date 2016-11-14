@@ -55,6 +55,10 @@ function eliminar()
 	document.getElementById("eliminarTrabajador").submit();
 }
 
+function actualizarTrab(id)
+{
+    document.getElementById("actualizar"+id).submit();
+}
 
 function validarSiNumero(numero){
     cent=0;

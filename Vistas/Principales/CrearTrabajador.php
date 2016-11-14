@@ -31,7 +31,7 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td colspan="4"><center>Datos de Trabajador</center></td>
+							<td colspan="4"><center>DATOS DE TRABAJADOR</center></td>
 						</tr>
 					</thead>
 					<tbody>

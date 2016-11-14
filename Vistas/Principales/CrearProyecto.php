@@ -56,7 +56,7 @@
 							<table class="table table-condensed">
 								<thead>
 									<tr class="cart_menu">
-										<td colspan="4"><center>Datos de proyecto</center></td>
+										<td colspan="4"><center>DATOS DE PROYECTO</center></td>
 									</tr>
 								</thead>
 								<tbody>

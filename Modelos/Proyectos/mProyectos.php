@@ -119,10 +119,11 @@ private $bd;
             $this->bd->desconectar();
     }
 
-  function cargar_Proyectos(){
+  function listar_proyecto(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT id_codigo,codigo,nombre,cantidad,unidad_medida
-                                            FROM productos;");
+        $consulta = $this->bd->set_Consulta("SELECT *
+                                            FROM proyecto
+                                            WHERE estado = 'Activo';");
         $this->bd->desconectar();
         return $consulta;
     }
