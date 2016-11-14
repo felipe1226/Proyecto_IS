@@ -35,8 +35,6 @@
 					<div class="search_box">
 						<input type="text" name="consulta" id="consulta" placeholder="ingrese codigo"/>
 					</div>
-
-
 				</form>
 			</div>
 		</div>
