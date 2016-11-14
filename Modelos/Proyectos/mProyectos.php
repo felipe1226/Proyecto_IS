@@ -229,7 +229,7 @@ private $bd;
     }
     function responsablexproyecto($codigo){
         $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT nombre,Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='activo'");
+            $this->bd->set_Consulta("SELECT nombre, Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='activo'");
             $this->bd->desconectar();
             return $consulta;
     }
