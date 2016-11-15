@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="refresh" content="600" url="../Front/front.php"> 
-    <title>Proyectos | Fundacion Pro Niñez</title>
+    <title>Comunidades | Fundacion Pro Niñez</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -30,8 +30,8 @@
 	<section id="cart_items">
 		<div class="container">
 			<div class="item active">
-				<form id ="consultarProyecto" method="POST" action="/Proyecto_IS/Vistas/Principales/ActualizarProyecto.php">
-					<h1><span>C</span>onsultar <span>P</span>royecto</h1>
+				<form id ="consultarProyecto" method="POST" action="/Proyecto_IS/Vistas/Principales/ActualizarComunidad.php">
+					<h1><span>C</span>onsultar <span>C</span>omunidad</h1>
 					<div class="search_box">
 						<input type="text" name="consulta" id="consulta" placeholder="Ingrese codigo"/>
 					</div>

@@ -75,11 +75,11 @@
                                 
                                 <li class="dropdown"><a href="#">Consultas<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Representante</a></li>	
-                                         <li id="listas_trabajador"><a href="../Principales/shop.php" target="principal">Comunidad</a></li>	
-                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Infante</a></li>
-                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Tema</a></li>
-                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Objetivo</a></li>
+                                        <li id="resgitro_trabajador"><a href="../Principales/consultarRepresentante.php" target="principal">Representante</a></li>	
+                                         <li id="listas_trabajador"><a href="../Principales/consultarComunidad.php" target="principal">Comunidad</a></li>	
+                                          <li id="consultar_trabajador"><a href="../Principales/consultarInfante.php" target="principal">Infante</a></li>
+                                          <li id="consultar_trabajador"><a href="../Principales/consultarTema.php" target="principal">Tema</a></li>
+                                          <li id="consultar_trabajador"><a href="../Principales/consultarObjetivo.php" target="principal">Objetivo</a></li>
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Listados<i class="fa fa-angle-down"></i></a>

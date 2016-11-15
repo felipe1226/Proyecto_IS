@@ -1,8 +1,19 @@
 <?php
 
 require_once("../../Modelos/Proyectos/mProyectos.php");
+require_once("../../Modelos/Proyectos/mComunidad.php");
+require_once("../../Modelos/Proyectos/mInfante.php");
+require_once("../../Modelos/Proyectos/mTema.php");
+require_once("../../Modelos/Proyectos/mObjetivo.php");
+require_once("../../Modelos/Proyectos/mRepresentante.php");
+
 
 $proyecto = new Proyecto();
+$comunidad = new Comunidad();
+$infante = new Infante();
+$tema = new Tema();
+$objetivo = new Objetivo();
+$representante = new Representante();
 
 
     $proyecto->Registrar_Proyecto(  $_POST['codigo'],
@@ -18,19 +29,19 @@ $proyecto = new Proyecto();
 
             );
 
-    $proyecto->Registrar_Tema(  $_POST['codigo_tema'],
+    $tema->Registrar_Tema(  $_POST['codigo_tema'],
                                	$_POST['descripcion_tema']
 
             );
 
-    $proyecto->Registrar_Objetivo(  $_POST['codigo_objetivo'],
+    $objetivo->Registrar_Objetivo(  $_POST['codigo_objetivo'],
                                	$_POST['descripcion_objetivo'], 
                                	$_POST['clasificacion'],
                                	$_POST['codigo']
 
             );
 
-    $proyecto->Registrar_Comunidad(  $_POST['codigo_comunidad'],
+    $comunidad->Registrar_Comunidad(  $_POST['codigo_comunidad'],
                                	$_POST['etnia'], 
                                	$_POST['nombre_comunidad'],
                                	$_POST['poblacion'],
@@ -38,7 +49,7 @@ $proyecto = new Proyecto();
 
             );
 
-    $proyecto->Registrar_Representante(  $_POST['id_representante'],
+    $representante->Registrar_Representante(  $_POST['id_representante'],
                                	$_POST['nombre_representante'], 
                                	$_POST['apellido_representante'],
                                	$_POST['nac_representante'],
@@ -48,7 +59,7 @@ $proyecto = new Proyecto();
 
             );
 
-    $proyecto->Registrar_Infante(  $_POST['id_infante'],
+    $infante->Registrar_Infante(  $_POST['id_infante'],
                                	$_POST['nombre_infante'], 
                                	$_POST['apellido_infante'],
                                	$_POST['nac_infante'],

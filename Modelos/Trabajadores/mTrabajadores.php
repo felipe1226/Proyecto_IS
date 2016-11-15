@@ -151,7 +151,7 @@ private $bd;
             $this->bd->desconectar();
 
         echo'  <script>
-                alert("Se ha modificado los datos del trabajador exitosamente!");
+                alert("Se han modificado los datos del trabajador exitosamente!");
                 top.location.href="/Proyecto_IS/Vistas/Front/Front.php";
                 </script>';
     }
