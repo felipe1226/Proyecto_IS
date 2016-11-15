@@ -52,12 +52,26 @@ private $bd;
         return $consulta;
     }
 
+    function actualizar_representante($id, $nombre, $apellido,$fnato, $celular, $ciudad, $direccion){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE representante SET  nombre = '".$nombre."',
+                                                                apellido = '".$apellido."',
+                                                                fnato = '".$fnato."',
+                                                                celular = '".$celular."',
+                                                                ciudad = '".$ciudad."',
+                                                                direccion = '".$direccion."'
+                                        WHERE id = ".$id."");
+            $this->bd->desconectar();
+
+        echo'  <script>
+                alert("Se han modificado los datos del representante exitosamente!");
+                top.location.href="/Proyecto_IS/Vistas/Front/front.php";
+                </script>';
+    }
     function eliminar_representante($id){
         $this->bd->conectar();
             $this->bd->set_Consulta("UPDATE representante SET  estado = 'Inactivo'
-                                        WHERE id = (SELECT representante 
-                                                    FROM comunidad 
-                                                    WHERE codigo = ".$id.")");
+                                        WHERE id = ".$id."");
             $this->bd->desconectar();
 
     }
