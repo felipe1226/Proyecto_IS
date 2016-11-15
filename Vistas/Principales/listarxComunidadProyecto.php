@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Listar Comunidad por Proyectos | Fundacion Pro Niñez</title>
+    <title>Proyectos| Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE COMUNIDAD POR PROYECTO</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS </p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 							<td class="image">CODIGO</td>

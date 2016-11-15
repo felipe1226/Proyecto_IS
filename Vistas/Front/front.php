@@ -44,7 +44,7 @@
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-12">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -57,7 +57,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="front.php" class="active">Inicio</a></li>
-								<li class="dropdown"><a href="#">Proyectos<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Proyecto<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li id="crear_proyecto"><a href="../Principales/CrearProyecto.php" target="principal">Crear proyecto</a></li>	
                                         <li id="listar_proyectos"><a href="../Principales/ListarProyectos.php" target="principal">Listar Proyectos</a></li>
@@ -65,7 +65,7 @@
                                           
                                     </ul>
                                 </li> 
-                                <li class="dropdown"><a href="#">Trabajadores<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Trabajador<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
                                          <li id="listas_trabajador"><a href="../Principales/ListarTrabajador" target="principal">Listar trabajadores</a></li>	
@@ -73,27 +73,34 @@
                                     </ul>
                                 </li> 
                                 
-                                <li class="dropdown"><a href="#">Consultas<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Comunidad<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="resgitro_trabajador"><a href="../Principales/consultarRepresentante.php" target="principal">Representante</a></li>	
-                                         <li id="listas_trabajador"><a href="../Principales/consultarComunidad.php" target="principal">Comunidad</a></li>	
-                                          <li id="consultar_trabajador"><a href="../Principales/consultarInfante.php" target="principal">Infante</a></li>
-                                          <li id="consultar_trabajador"><a href="../Principales/consultarTema.php" target="principal">Tema</a></li>
-                                          <li id="consultar_trabajador"><a href="../Principales/consultarObjetivo.php" target="principal">Objetivo</a></li>
+                                         <li id="listas_comunidades"><a href="../Principales/ListarComunidad.php" target="principal">Listar comunidades</a></li>	
+                                          <li id="consultar_comunidad"><a href="../Principales/consultarComunidad.php" target="principal">Consultar comunidad</a></li>
                                     </ul>
                                 </li> 
-                                <li class="dropdown"><a href="#">Listados<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Representante<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
-                                         <li id="listas_trabajador"><a href="../Principales/shop.php" target="principal">Listar trabajadores</a></li>	
-                                          <li id="consultar_trabajador"><a href="../Principales/shop.php" target="principal">Consultar trabajador</a></li>
+                                         <li id="listas_representantes"><a href="../Principales/ListarRepresentantes.php" target="principal">Listar representantes</a></li>	
+                                          <li id="consultar_representante"><a href="../Principales/consultarRepresentante.php" target="principal">Consultar representante</a></li>
                                     </ul>
                                 </li> 
-                                <li class="dropdown"><a href="#">¿Quienes somos?<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Infante<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="mision"><a href="../Principales/CrearTrabajador.php" target="principal">Mision</a></li>	
-                                         <li id="vision"><a href="../Principales/shop.php" target="principal">Vision</a></li>	
-                                          <li id="contactenos"><a href="../Principales/shop.php" target="principal">Contactenos</a></li>
+                                         <li id="listas_infantes"><a href="../Principales/ListarInfantes.php" target="principal">Listar infantes</a></li>	
+                                          <li id="consultar_comunidad"><a href="../Principales/consultarInfante.php" target="principal">Consultar infante</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="dropdown"><a href="#">Objetivo<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                         <li id="listas_objetivos"><a href="../Principales/ListarObjetivos.php" target="principal">Listar objetivos</a></li>	
+                                          <li id="consultar_representante"><a href="../Principales/consultarObjetivo.php" target="principal">Consultar objetivo</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="dropdown"><a href="#">Tema<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                         <li id="listas_tema"><a href="../Principales/ListarTemas.php" target="principal">Listar temas</a></li>	
+                                          <li id="consultar_representante"><a href="../Principales/consultarTema.php" target="principal">Consultar tema</a></li>
                                     </ul>
                                 </li> 
 							</ul>
