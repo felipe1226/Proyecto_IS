@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Listar Proyectos | Fundacion Pro Niñez</title>
+    <title>Listar de proyectos por un responsable| Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -29,27 +29,20 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS POR UN DIRECTIVO RESPONSABLE</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
 							<td class="image">CODIGO</td>
 							<td class="description">TITULO</td>
 							<td class="description">DESCRIPCION</td>
-							<td class="description">ALCANCE</td>
-							<td class="description">PRESUPUESTO</td>
-							<td class="description">FECHA INICIO</td>
-							<td class="description">FECHA FINALIZACION</td>
-							<td class="description">RESPONSABLE</td>
-							<td class="description">COMUNIDAD</td>
-							<td class="description">TEMA</td>
 							<td class="description"></td>
 						</tr>
 					</thead>
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->listar_proyecto()){
+							if($consulta = $proyecto->proyectoxresponsable()){
 								
                                  $cantidad = pg_num_rows($consulta);
 
@@ -64,19 +57,7 @@
 
 										<td class='cart_description'>".$campos[2]."</td>
 
-										<td class='cart_description'>".$campos[3]."</td>
-
-										<td class='cart_description'>".$campos[4]."</td>
-
-										<td class='cart_description'>".$campos[5]."</td>
 										
-										<td class='cart_description'>".$campos[6]."</td>
-										
-										<td class='cart_description'>".$campos[7]."</td>
-										
-										<td class='cart_description'>".$campos[8]."</td>
-										
-										<td class='cart_description'>".$campos[9]."</td>
 										
 										<td class='cart_delete'>
 											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarProy(this.id)'><i class='fa fa-bookmark-o' title='Actualizar proyecto'></i></a>
