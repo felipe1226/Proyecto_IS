@@ -281,7 +281,6 @@ private $bd;
             $this->bd->desconectar();
             return $consulta;
     }
-
     /*function eliminar_Proyecto($id){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("DELETE  FROM productos
