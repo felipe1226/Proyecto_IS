@@ -2,7 +2,7 @@
 
 require_once("../../Modelos/Proyectos/mObjetivo.php");
 
-$objetivo = new objetivo();
+$objetivo = new Objetivo();
 
 
     $objetivo->actualizar_objetivos(  $_POST['codigo'],

@@ -44,8 +44,8 @@ private $bd;
     function consultar_representante($id){
 
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT id,nombre,apellido,fnato,celular, ciudad, fechaf, direccion
-                                                FROM comunidad
+        $consulta = $this->bd->set_Consulta("SELECT id,nombre,apellido,fnato,celular, ciudad, direccion
+                                                FROM representante
                                                 WHERE estado = 'Activo' AND id = '".$id."'");
         $this->bd->desconectar();
         

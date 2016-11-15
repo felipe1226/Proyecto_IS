@@ -51,10 +51,10 @@
 														<td>Celular :</td><td><input name="celular"  id ="celular" type="text"  value="'.$info[4].'"/></td>
 													</tr>
 													<tr>
-														<td>Ciudad :</td><td><input name="ciudad"  id ="ciudad" type="text"  value="'.$info[4].'"/></td>
+														<td>Ciudad :</td><td><input name="ciudad"  id ="ciudad" type="text"  value="'.$info[5].'"/></td>
 													</tr>
 													<tr>
-														<td>Direccion :</td><td><input name="direccion"  id ="direccion" type="text"  value="'.$info[4].'"/></td>
+														<td>Direccion :</td><td><input name="direccion"  id ="direccion" type="text"  value="'.$info[6].'"/></td>
 													</tr>
 
 													</tbody>

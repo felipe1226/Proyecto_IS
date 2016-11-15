@@ -46,7 +46,7 @@
 														<td>Valor:</td><td><input name="valor"  id = "valor" type="text" value="'.$info[2].'" /></td>
 							                         </tr>
 							                         <tr>
-														<td>codigo de proyecto:</td><td><input name="coproyecto"  id = "coproyecto" type="text" value="'.$info[3].'" /></td>
+														<td>codigo de proyecto:</td><td><input disabled name="coproyecto"  id = "coproyecto" type="text" value="'.$info[3].'" /></td>
 							                         </tr>
 							                         
 
