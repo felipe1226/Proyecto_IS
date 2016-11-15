@@ -167,9 +167,6 @@ private $bd;
             $this->bd->desconectar();
             return $consulta;
     }
-
-    
-
 }
 
 ?>
