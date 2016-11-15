@@ -129,7 +129,7 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="https://https://www.facebook.com/felipe.bedoya.56?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://https://www.facebook.com/felipe.bedoya.56"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
