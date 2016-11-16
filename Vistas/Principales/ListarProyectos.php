@@ -54,7 +54,7 @@
 
 						<?php 
 							if($_POST['tbusqueda']=="todo"){
-								$consulta = $proyecto->listar_proyecto()){
+								$consulta = $proyecto->listar_proyecto(){
 							}
 							else{
 								if($_POST['opcion']=="Comunidad"){
