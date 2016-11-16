@@ -43,59 +43,74 @@
 							<td class="description">RESPONSABLE</td>
 							<td class="description">COMUNIDAD</td>
 							<td class="description">TEMA</td>
-							<td class="description"></td>
+							<?php 
+								if($_POST['tbusqueda']=="todo"){
+									echo "<td class='description'></td>";
+								}
+							?>
 						</tr>
 					</thead>
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->listar_proyecto()){
-								
-                                 $cantidad = pg_num_rows($consulta);
-
-                                 for($i=0;$i< $cantidad; $i++){
-                                 	$campos = $proyecto->datos();
-                                    
-									echo "
-									<tr>
-										<td class='cart_description'>".$campos[0]."</td>
-
-										<td class='cart_description'>".$campos[1]."</td>
-
-										<td class='cart_description'>".$campos[2]."</td>
-
-										<td class='cart_description'>".$campos[3]."</td>
-
-										<td class='cart_description'>".$campos[4]."</td>
-
-										<td class='cart_description'>".$campos[5]."</td>
-										
-										<td class='cart_description'>".$campos[6]."</td>
-										
-										<td class='cart_description'>".$campos[7]."</td>
-										
-										<td class='cart_description'>".$campos[8]."</td>
-										
-										<td class='cart_description'>".$campos[9]."</td>
-										
-										<td class='cart_delete'>
-											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarProy(this.id)'><i class='fa fa-bookmark-o' title='Actualizar proyecto'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarProyecto.php'>
-													<input name='consulta' id='consulta' type='hidden' value='".$campos[0]."'/>
-											</form>
-										</td>
-										</tr>";
+							if($_POST['tbusqueda']=="todo"){
+								$consulta = $proyecto->listar_proyecto()){
+							}
+							else{
+								if($_POST['opcion']=="Comunidad"){
+									$consulta = $proyecto->ListarXComunidadProyecto($_POST['consulta']){
 								}
+								if($_POST['opcion']=="Responsable"){
+									$consulta = $proyecto->proyectoxresponsable($_POST['consulta']){
+								}
+								if($_POST['opcion']=="Directivo"){
+									$consulta = $proyecto->listar_proyecto()){
+								}
+								if($_POST['opcion']=="Fecha"){
+									$consulta = $proyecto->listar_proyecto()){
+								}
+								if($_POST['opcion']=="Valor inferior a"){
+									$consulta = $proyecto->listar_proyecto()){
+								}
+							}
+							$cantidad = pg_num_rows($consulta);
+							if($cantidad>0){}
+								for($i=0;$i< $cantidad; $i++){
+		                            $campos = $proyecto->datos();
+	                                    
+										echo '
+										<tr>
+											<td class="cart_description">'.$campos[0].'</td>
 
-								if($cantidad == 0)
-								{
+											<td class="cart_description">'.$campos[1].'</td>
+
+											<td class="cart_description">'.$campos[2].'</td>
+
+											<td class="cart_description">'.$campos[3].'</td>
+											<td class="cart_description">'.$campos[4].'</td>
+
+											<td class="cart_description">'.$campos[5].'</td>
+											
+											<td class="cart_description">'.$campos[6].'</td>
+											
+											<td class="cart_description">'.$campos[7].'</td>';
+											
+											if($_POST['tbusqueda']=="todo"){
+												echo '<td class="cart_delete">
+													<a class="cart_quantity_delete" id="'.$campos[0].'" onclick="actualizarProy(this.id)"><i class="fa fa-bookmark-o" title="Actualizar proyecto"></i></a>
+													<form name="actualizar" id="actualizar"'.$campos[0].'" method="POST" action="ActualizarProyecto.php">
+															<input name="consulta" id="consulta" type="hidden" value="'.$campos[0].'"/>
+													</form>
+												</td>';
+											}
+										</tr>
+								}
+							}
+							else{
 									echo "
 											<td class='cart_description' align='center'>
 											<p align='center'>¡No hay proyectos en la base de datos!</p>
-											</td>
-									";
-								}
-
+											</td>";
 							}
 	 					?>
 						

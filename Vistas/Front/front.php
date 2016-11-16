@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	
 ?>
 <html lang="en">
@@ -60,8 +60,9 @@
 								<li class="dropdown"><a href="#">Proyecto<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li id="crear_proyecto"><a href="../Principales/CrearProyecto.php" target="principal">Crear proyecto</a></li>	
-                                        <li id="listar_proyectos"><a href="../Principales/ListarProyectos.php" target="principal">Listar Proyectos</a></li>
+                                        <li id="listar_proyectos"><a href="../Principales/ListadoProyectos.php" target="principal">Listar Proyectos</a></li>
                                          <li id="consultar_proyectos"><a href="../Principales/consultarProyecto.php" target="principal">Consultar proyecto</a></li>	
+                                          <li id="consultar_proyectos"><a href="../Principales/consultarProyecto.php" target="principal">Listar por comunidad</a></li>	
                                           
                                     </ul>
                                 </li> 
@@ -98,6 +99,12 @@
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Tema<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                         <li id="listas_tema"><a href="../Principales/ListarTemas.php" target="principal">Listar temas</a></li>	
+                                          <li id="consultar_representante"><a href="../Principales/consultarTema.php" target="principal">Consultar tema</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="dropdown"><a href="#">Consultas<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                          <li id="listas_tema"><a href="../Principales/ListarTemas.php" target="principal">Listar temas</a></li>	
                                           <li id="consultar_representante"><a href="../Principales/consultarTema.php" target="principal">Consultar tema</a></li>

@@ -30,12 +30,32 @@
 	<section id="cart_items">
 		<div class="container">
 			<div class="item active">
-				<form id ="listadoProyecto" method="POST" action="/Proyecto_IS/Vistas/Principales/ActualizarProyecto.php">
-					<h1><span>D</span>ato de <span>C</span>onsulta</h1>
-					<div class="search_box">
-						<input type="text" name="consulta" id="consulta" placeholder="Ingrese dato"/>
-					</div>
-				</form>
+                <div class="signup-form"><!--sign up form-->
+
+                    <form id ="listarTodo" method="POST" action="/Proyecto_IS/Vistas/Principales/listarProyectos.php">
+                        <input name="tbusqueda" id="tbusqueda" type="hidden" value="todo"/>
+                        <button type="submit" name="listar" id="listar">Listar Todos</button>
+
+                    </form>
+
+    				
+    				<h1><span>D</span>ato de <span>C</span>onsulta</h1>
+    				<form name="lista" id="lista" method="POST" action="/Proyecto_IS/Vistas/Principales/listarProyectos.php">
+                        <input name="tbusqueda" id="tbusqueda" type="hidden" value="opcion"/>
+                        <select name="opcion" id="opcion">
+                                <option>--opcion--</option>
+                                <option>Comunidad</option>
+                                <option>Responsable</option>
+                                <option>Directivo</option>
+                                <option>Fecha</option>
+                                <option>Valor inferior a</option>
+                                                       
+                        </select><br>
+                        <div class="search_box">
+                            <input type="text" name="consulta" id="consulta" placeholder="Ingrese dato"/>
+                        </div>
+                    </form>
+                </div>
 			</div>
 		</div>
 	</section>

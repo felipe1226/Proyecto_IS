@@ -117,7 +117,7 @@ private $bd;
 
     function ListarXComunidadProyecto($codigo_comunidad){
         $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT CODIGO, TITULO, DESCRIPCION, ALCANCE, PRESUPUESTO, FECHAI, FECHAF, RESPONSABLE from proyecto where COCOMUNIDAD = '"+ plan +"'and estado='activo'" );
+            $this->bd->set_Consulta("SELECT codigo, titulo, descripcion, alcance, presupuesto, fechai, fechaf, responsable from proyecto where cocomunidad = '".$codigo_comunidad."'and estado='activo'" );
             $this->bd->desconectar();
             return $consulta;
 
