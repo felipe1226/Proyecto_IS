@@ -46,7 +46,6 @@
                                 <option>--opcion--</option>
                                 <option>Comunidad</option>
                                 <option>Responsable</option>
-                                <option>Directivo</option>
                                 <option>Fecha</option>
                                 <option>Valor inferior a</option>
                                                        

@@ -63,14 +63,11 @@
 								if($_POST['opcion']=="Responsable"){
 									$consulta = $proyecto->proyectoxresponsable($_POST['consulta']){
 								}
-								if($_POST['opcion']=="Directivo"){
-									$consulta = $proyecto->listar_proyecto()){
-								}
 								if($_POST['opcion']=="Fecha"){
-									$consulta = $proyecto->listar_proyecto()){
+									$consulta = $proyecto->listarxfecha($_POST['consulta']){
 								}
 								if($_POST['opcion']=="Valor inferior a"){
-									$consulta = $proyecto->listar_proyecto()){
+									$consulta = $proyecto->proyectoxevaluacioninferior($_POST['consulta']){
 								}
 							}
 							$cantidad = pg_num_rows($consulta);
