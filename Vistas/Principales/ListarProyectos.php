@@ -87,9 +87,16 @@
 						</table>';
 						}
 						else{
-							echo "<td class='cart_description' align='center'>
-									<p align='center'>¡No hay resultado de proyectos en la base de datos!</p>
-					  			  </td>";
+							echo '
+											<td class="cart_description" align="center">
+
+											<h3><p align="center">¡No se encontraron proyectos en la base de datos!</p></h3>
+											<div class="signup-form"><!--sign up form-->
+												<form name="regresar" id="regresar" method="POST" action="ListadoProyectos.php">
+													<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Regresar</button>
+												</form>
+											</div>
+										</td>';
 
 						}
 					}
@@ -103,7 +110,7 @@
 								if($cantidad>0){
 									echo '<table class="table table-condensed">
 									<thead>
-									<tr class=cart_menu><td class="image" colspan="9"><center><p2>LISTA DE PROYECTOS</p2></center></td>
+									<tr class=cart_menu><td class="image" colspan="9"><center><p2>LISTA DE PROYECTOS POR COMUNIDAD</p2></center></td>
 									</tr>
 									<tr class="cart_menu">
 
@@ -151,9 +158,16 @@
 										</table>";		
 								}
 								else{
-									echo "<td class='cart_description' align='center'>
-										<p align='center'>¡No hay resultado de proyectos en la base de datos!</p>
-						  			  	</td>";
+									echo '
+											<td class="cart_description" align="center">
+
+											<h3><p align="center">¡No se encontraron proyectos con codigo de comunidad '.$_POST['consulta'].'!</p></h3>
+											<div class="signup-form"><!--sign up form-->
+												<form name="regresar" id="regresar" method="POST" action="ListadoProyectos.php">
+													<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Regresar</button>
+												</form>
+											</div>
+										</td>';
 
 								}	
 							}			
@@ -164,7 +178,7 @@
 								if($cantidad>0){
 									echo '<table class="table table-condensed">
 									<thead>
-									<tr class=cart_menu><td class="image" colspan="4"><center><p2>LISTA DE PROYECTOS</p2></center></td>
+									<tr class=cart_menu><td class="image" colspan="4"><center><p2>LISTA DE PROYECTOS POR RESPONSABLE</p2></center></td>
 									</tr>
 									<tr class="cart_menu">
 
@@ -197,9 +211,16 @@
 										</table>";		
 								}
 								else{
-									echo "<td class='cart_description' align='center'>
-										<p align='center'>¡No hay resultado de proyectos en la base de datos!</p>
-						  			  	</td>";
+									echo '
+											<td class="cart_description" align="center">
+
+											<h3><p align="center">¡No se encontraron proyectos con responsables con identificacion '.$_POST['consulta'].'!</p></h3>
+											<div class="signup-form"><!--sign up form-->
+												<form name="regresar" id="regresar" method="POST" action="ListadoProyectos.php">
+													<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Regresar</button>
+												</form>
+											</div>
+										</td>';
 
 								}
 							}
@@ -210,7 +231,7 @@
 							if($cantidad>0){
 								echo '<table class="table table-condensed">
 								<thead>
-								<tr class=cart_menu><td class="image" colspan="4"><center><p2>LISTA DE PROYECTOS</p2></center></td>
+								<tr class=cart_menu><td class="image" colspan="4"><center><p2>LISTA DE PROYECTOS POR FECHA</p2></center></td>
 								</tr>
 								<tr class="cart_menu">
 
@@ -241,9 +262,16 @@
 									</table>";		
 							}
 							else{
-								echo "<td class='cart_description' align='center'>
-									<p align='center'>¡No hay resultado de proyectos en la base de datos!</p>
-					  			  	</td>";
+								echo '
+											<td class="cart_description" align="center">
+
+											<h3><p align="center">¡No se encontraron proyectos en la fecha '.$_POST['consulta'].'!</p></h3>
+											<div class="signup-form"><!--sign up form-->
+												<form name="regresar" id="regresar" method="POST" action="ListadoProyectos.php">
+													<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Regresar</button>
+												</form>
+											</div>
+										</td>';
 
 							}
 						}
@@ -253,7 +281,7 @@
 							if($cantidad>0){
 								echo '<table class="table table-condensed">
 								<thead>
-								<tr class=cart_menu><td class="image" colspan="5"><center><p2>LISTA DE PROYECTOS</p2></center></td>
+								<tr class=cart_menu><td class="image" colspan="5"><center><p2>PROYECTOS CON VALOR INFERIOR A '.$_POST['consulta'].'</p2></center></td>
 								</tr>
 								<tr class="cart_menu">
 
@@ -286,9 +314,16 @@
 									</table>";		
 							}
 							else{
-								echo "<td class='cart_description' align='center'>
-									<p align='center'>¡No hay resultado de proyectos en la base de datos!</p>
-					  			  	</td>";
+								echo '
+											<td class="cart_description" align="center">
+
+											<h3><p align="center">¡No se encontraron proyectos con valor inferior a '.$_POST['consulta'].'!</p></h3>
+											<div class="signup-form"><!--sign up form-->
+												<form name="regresar" id="regresar" method="POST" action="ListadoProyectos.php">
+													<p align="center"><button id="boton" type="submit" class="btn btn-default" ">Regresar</button>
+												</form>
+											</div>
+										</td>';
 
 							}
 						}

@@ -166,7 +166,7 @@ private $bd;
             return $consulta;
     }
 
-    function listarxniñocomunidad($codigo{
+    function listarxniñocomunidad($codigo){
         $this->bd->conectar();
          $consulta=$this->bd->set_Consulta("SELECT * from infante where comunidad='"+ plan +"' and estado='activo'");
             $this->bd->desconectar();
