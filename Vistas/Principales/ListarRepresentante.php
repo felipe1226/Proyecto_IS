@@ -1,6 +1,6 @@
 <?php 
-	require_once("../../Modelos/Tema/mTema.php");
-	$tema = new Tema();
+	require_once("../../Modelos/Proyectos/mRepresentante.php");
+	$trabajador = new Trabajador();
  ?>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tema | Fundacion Pro Niñez</title>
+    <title>Representante | Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -29,33 +29,45 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE TEMA</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE REPRESENTANTE</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
-							<td class="image">CODIGO</td>
-							<td class="description">DESCRIPCIÓN</td>
+							<td class="image">ID</td>
+							<td class="description">NOMBRE</td>
+							<td class="description">APELLIDO</td>
+							<td class="description">FECHA DE NACIMIENTO</td>
+							<td class="description">CELULAR</td>
+							<td class="description">DIRECCION</td>
 							<td class="description"></td>
 						</tr>
 					</thead>
 					<tbody>
 
 						<?php 
-							if($consulta = $Tema->listar_tema()){
+							if($consulta = $representante->listar_representante()){
 								
                                  $cantidad = pg_num_rows($consulta);
 
                                  for($i=0;$i< $cantidad; $i++){
-                                 	$campos = $tema->datos();
+                                 	$campos = $representante->datos();
                                     
 									echo "
 									<tr>
 										<td class='cart_description'>".$campos[0]."</td>
 
 										<td class='cart_description'>".$campos[1]."</td>
+
+										<td class='cart_description'>".$campos[2]."</td>
+
+										<td class='cart_description'>".$campos[3]."</td>
+
+										<td class='cart_description'>".$campos[4]."</td>
+
+										<td class='cart_description'>".$campos[5]."</td>
 										<td class='cart_delete'>
-											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar tema'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarTema.php'>
+											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar Representante'></i></a>
+											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarRepresentate.php'>
 															<input name='consulta' id = 'consulta' type='hidden' value='".$campos[0]."'/>
 											</form>
 										</td>
@@ -68,7 +80,7 @@
 								{
 									echo "
 											<td class='cart_description' align='center'>
-											<p align='center'>¡No hay temas en la base de datos!</p>
+											<p align='center'>¡No hay representante en la base de datos!</p>
 											</td>
 									";
 								}

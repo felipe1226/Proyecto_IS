@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Infante/actualizar.js"> </script>
+	<script src="../../Scripts/Trabajadores/actualizar.js"> </script>
 
 	
 
