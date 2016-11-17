@@ -1,6 +1,6 @@
 <?php 
 	require_once("../../Modelos/Proyectos/mRepresentante.php");
-	$trabajador = new Trabajador();
+	$representante = new Representante();
  ?>
 <html lang="en">
 <head>
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE REPRESENTANTE</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE REPRESENTANTES</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
