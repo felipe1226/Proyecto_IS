@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS POR UN DIRECTIVO RESPONSABLE</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS POR DIRECTIVO RESPONSABLE</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -42,7 +42,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->proyectoxresponsable()){
+							if($consulta = $proyecto->proyectoxresponsable($_POST['consulta')){
 								
                                  $cantidad = pg_num_rows($consulta);
 
@@ -73,8 +73,7 @@
 									echo "
 											<td class='cart_description' align='center'>
 											<p align='center'>¡No hay proyectos en la base de datos!</p>
-											</td>
-									";
+											</td>";
 								}
 
 							}

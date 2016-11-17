@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>Listar proyectos por fecha</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS POR FECHA</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -42,7 +42,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->listarxfecha()){
+							if($consulta = $proyecto->listarxfecha($_POST['consulta')){
 								
                                  $cantidad = pg_num_rows($consulta);
 

@@ -43,7 +43,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->proyectoxevaluacioninferior()){
+							if($consulta = $proyecto->proyectoxevaluacioninferior($_POST['consulta')){
 								
                                  $cantidad = pg_num_rows($consulta);
 

@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS </p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="11"><center><p2>LISTA DE PROYECTOS POR COMUNIDAD</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 							<td class="image">CODIGO</td>
@@ -46,7 +46,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->ListarXComunidadProyecto()){
+							if($consulta = $proyecto->ListarXComunidadProyecto($_POST['consulta'])){
 								
                                  $cantidad = pg_num_rows($consulta);
 
@@ -70,6 +70,11 @@
 										<td class='cart_description'>".$campos[6]."</td>
 										
 										<td class='cart_description'>".$campos[7]."</td>
+
+										<td class='cart_description'>".$campos[8]."</td>
+										
+										<td class='cart_description'>".$campos[9]."</td>
+
 										
 										<td class='cart_delete'>
 											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarProy(this.id)'><i class='fa fa-bookmark-o' title='Actualizar proyecto'></i></a>
