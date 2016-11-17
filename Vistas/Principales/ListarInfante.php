@@ -1,6 +1,6 @@
 <?php 
-	require_once("../../Modelos/Infante/mComunidad.php");
-	$comunidad = new Comunidad();
+	require_once("../../Modelos/Infante/mInfante.php");
+	$infante = new Infante();
  ?>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Comunidad | Fundacion Pro Niñez</title>
+    <title>Infante | Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Trabajadores/actualizar.js"> </script>
+	<script src="../../Scripts/Infante/actualizar.js"> </script>
 
 	
 
@@ -29,27 +29,27 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE COMUNIDAD</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE INFANTE</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
-							<td class="image">CODIGO</td>
-							<td class="description">ETNIA</td>
+							<td class="image">ID</td>
 							<td class="description">NOMBRE</td>
-							<td class="description">POBLACION</td>
-							<td class="description">REPRESENTANTE</td>
+							<td class="description">APELLIDO</td>
+							<td class="description">FECHA NACIMIENTO</td>
+							<td class="description">COMUNIDAD</td>
 							<td class="description"></td>
 						</tr>
 					</thead>
 					<tbody>
 
 						<?php 
-							if($consulta = $comunidad->listar_comunidad()){
+							if($consulta = $infante->listar_infante()){
 								
                                  $cantidad = pg_num_rows($consulta);
 
                                  for($i=0;$i< $cantidad; $i++){
-                                 	$campos = $comunidad->datos();
+                                 	$campos = $infante->datos();
                                     
 									echo "
 									<tr>
@@ -62,9 +62,10 @@
 										<td class='cart_description'>".$campos[3]."</td>
 
 										<td class='cart_description'>".$campos[4]."</td>
+										
 										<td class='cart_delete'>
-											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar comunidad'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarComunidad.php'>
+											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar infante'></i></a>
+											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarInfante.php'>
 															<input name='consulta' id = 'consulta' type='hidden' value='".$campos[0]."'/>
 											</form>
 										</td>
