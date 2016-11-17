@@ -1,5 +1,5 @@
 <?php 
-	require_once("../../Modelos/Tema/mTema.php");
+	require_once("../../Modelos/Proyectos/mTema.php");
 	$tema = new Tema();
  ?>
 <html lang="en">
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE TEMA</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="3"><center><p2>LISTA DE TEMAS</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -41,7 +41,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $Tema->listar_tema()){
+							if($consulta = $tema->listar_temas()){
 								
                                  $cantidad = pg_num_rows($consulta);
 

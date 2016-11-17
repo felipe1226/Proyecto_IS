@@ -27,6 +27,15 @@ private $bd;
             $this->bd->desconectar();
     }
 
+    function listar_temas(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT codigo,descripcion
+                                            FROM tema
+                                            WHERE estado = 'Activo';");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
     function consultar_tema($codigo){
 
         $this->bd->conectar();

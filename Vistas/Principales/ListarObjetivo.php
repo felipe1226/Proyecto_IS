@@ -1,5 +1,5 @@
 <?php 
-	require_once("../../Modelos/Objetivo/mObjetivo.php");
+	require_once("../../Modelos/Proyectos/mObjetivo.php");
 	$objetivo = new Objetivo();
  ?>
 <html lang="en">
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE OBJETIVOS</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="5"><center><p2>LISTA DE OBJETIVOS</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -43,7 +43,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $objetivo->listar_objetivo()){
+							if($consulta = $objetivo->listar_objetivos()){
 								
                                  $cantidad = pg_num_rows($consulta);
 

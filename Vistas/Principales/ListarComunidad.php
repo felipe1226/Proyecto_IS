@@ -1,5 +1,5 @@
 <?php 
-	require_once("../../Modelos/Infante/mComunidad.php");
+	require_once("../../Modelos/Proyectos/mComunidad.php");
 	$comunidad = new Comunidad();
  ?>
 <html lang="en">
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE COMUNIDAD</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="6"><center><p2>LISTA DE COMUNIDADES</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 

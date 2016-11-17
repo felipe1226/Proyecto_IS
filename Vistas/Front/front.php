@@ -81,25 +81,25 @@
                                 </li> 
                                 <li class="dropdown"><a href="#">Representante<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                         <li id="listas_representantes"><a href="../Principales/ListarRepresentantes.php" target="principal">Listar representantes</a></li>	
+                                         <li id="listas_representantes"><a href="../Principales/ListarRepresentante.php" target="principal">Listar representantes</a></li>	
                                           <li id="consultar_representante"><a href="../Principales/consultarRepresentante.php" target="principal">Consultar representante</a></li>
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Infante<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                         <li id="listas_infantes"><a href="../Principales/ListarInfantes.php" target="principal">Listar infantes</a></li>	
+                                         <li id="listas_infantes"><a href="../Principales/ListarInfante.php" target="principal">Listar infantes</a></li>	
                                           <li id="consultar_comunidad"><a href="../Principales/consultarInfante.php" target="principal">Consultar infante</a></li>
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Objetivo<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                         <li id="listas_objetivos"><a href="../Principales/ListarObjetivos.php" target="principal">Listar objetivos</a></li>	
+                                         <li id="listas_objetivos"><a href="../Principales/ListarObjetivo.php" target="principal">Listar objetivos</a></li>	
                                           <li id="consultar_representante"><a href="../Principales/consultarObjetivo.php" target="principal">Consultar objetivo</a></li>
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Tema<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                         <li id="listas_tema"><a href="../Principales/ListarTemas.php" target="principal">Listar temas</a></li>	
+                                         <li id="listas_tema"><a href="../Principales/ListarTema.php" target="principal">Listar temas</a></li>	
                                           <li id="consultar_representante"><a href="../Principales/consultarTema.php" target="principal">Consultar tema</a></li>
                                     </ul>
                                 </li> 

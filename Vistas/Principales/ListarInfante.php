@@ -1,5 +1,5 @@
 <?php 
-	require_once("../../Modelos/Infante/mInfante.php");
+	require_once("../../Modelos/Proyectos/mInfante.php");
 	$infante = new Infante();
  ?>
 <html lang="en">
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE INFANTE</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="6"><center><p2>LISTA DE INFANTES</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -44,7 +44,7 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $infante->listar_infante()){
+							if($consulta = $infante->listar_infantes()){
 								
                                  $cantidad = pg_num_rows($consulta);
 
