@@ -62,7 +62,7 @@
 										<td class='cart_description'>".$campos[3]."</td>
 
 										<td class='cart_description'>".$campos[4]."</td>
-										
+
 										<td class='cart_delete'>
 											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar infante'></i></a>
 											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarInfante.php'>
@@ -78,7 +78,7 @@
 								{
 									echo "
 											<td class='cart_description' align='center'>
-											<p align='center'>¡No hay trabajadores en la base de datos!</p>
+											<p align='center'>¡No hay infantes en la base de datos!</p>
 											</td>
 									";
 								}

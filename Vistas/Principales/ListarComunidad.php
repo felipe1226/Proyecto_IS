@@ -77,7 +77,7 @@
 								{
 									echo "
 											<td class='cart_description' align='center'>
-											<p align='center'>¡No hay trabajadores en la base de datos!</p>
+											<p align='center'>¡No hay comunidad en la base de datos!</p>
 											</td>
 									";
 								}
