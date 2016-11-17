@@ -32,7 +32,7 @@
 			<div class="item active">
                 <div class="signup-form"><!--sign up form-->
 
-                    <form id ="listarTodo" method="POST" action="/Proyecto_IS/Vistas/Principales/listarProyectos.php">
+                    <form id ="listarTodo" method="POST" action="/Proyecto_IS/Vistas/Principales/ListarProyectos.php">
                         <input name="tbusqueda" id="tbusqueda" type="hidden" value="todo"/>
                         <button type="submit" name="listar" id="listar">Listar Todos</button>
 
@@ -40,7 +40,7 @@
 
     				
     				<h1><span>D</span>ato de <span>C</span>onsulta</h1>
-    				<form name="lista" id="lista" method="POST" action="/Proyecto_IS/Vistas/Principales/listarProyectos.php">
+    				<form name="listaOpcion" id="listaOpcion" method="POST" action="/Proyecto_IS/Vistas/Principales/ListarProyectos.php">
                         <input name="tbusqueda" id="tbusqueda" type="hidden" value="opcion"/>
                         <select name="opcion" id="opcion">
                                 <option>--opcion--</option>

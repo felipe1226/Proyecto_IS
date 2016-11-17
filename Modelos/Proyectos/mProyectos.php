@@ -115,76 +115,67 @@ private $bd;
 
     }
 
-    function ListarPor($dato,$opcion){
-        if($opcion == "1"){
 
-        }
-        if($opcion == "2"){
-
-        }
-        if($opcion == "3"){
-
-        }
-        if($opcion == "4"){
-
-        }
-    }
-
-
-    function ListarXComunidadProyecto($codigo_comunidad){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT codigo, titulo, descripcion, alcance, presupuesto, fechai, fechaf, responsable FROM proyecto WHERE cocomunidad ='".$codigo_comunidad."' AND estado='Activo'" );
-            $this->bd->desconectar();
-            return $consulta;
-
-    }
-
-    function responsablexproyecto($codigo){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT nombre, Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='Activo'");
+    function listarxcomunidadproyecto($codigo){
+            $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT codigo,titulo,descripcion,alcance, presupuesto, fechai,fechaf,responsable FROM proyecto WHERE cocomunidad = '".$codigo."' and estado='Activo';");
             $this->bd->desconectar();
             return $consulta;
     }
 
     function proyectoxresponsable($id_representante){
         $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT codigo,titulo,descripcion from proyecto where responsable='".$id_representante."'and estado='Activo' ");
-            $this->bd->desconectar();
-            return $consulta;
-    }
-
-    function proyectoxevaluacioninferior($valor){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT proyecto.codigo,titulo,proyecto.descripcion,objetivo.valor FROM proyecto,objetivo WHERE objetivo.coproyecto=proyecto.codigo AND valor<'".$valor."' ");
-            $this->bd->desconectar();
-            return $consulta;
-    }
-
-    function objetivoevaluacionxproyecto($codigo_comunidad){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT descripcion,valor FROM objetivo WHERE coproyecto='"+ plan +"' AND estado='Activo'");
-            $this->bd->desconectar();
-            return $consulta;
-    }
-
-    function listarxniñocomunidad($codigo_objetivo){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT * from infante where comunidad='"+ plan +"' and estado='activo'");
-            $this->bd->desconectar();
-            return $consulta;
-    }
-
-    function profesionalesxespecializacion($nombre_representante){
-        $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT nombre,apellido,telefono from trabajador,profesional where especializacion='"+plan+"' and profesional.id=trabajador.id ");
+            
+        $consulta = $this->bd->set_Consulta("SELECT codigo,titulo,descripcion from proyecto where responsable='".$id_representante."'and estado='Activo' ");
             $this->bd->desconectar();
             return $consulta;
     }
 
     function listarxfecha($fechai){
         $this->bd->conectar();
-            $this->bd->set_Consulta("SELECT proyecto.codigo,titulo,proyecto.descripcion 
+        $consulta=$this->bd->set_Consulta("SELECT proyecto.codigo,titulo,proyecto.descripcion 
                                     FROM proyecto Where fechai='".$fechai."'and estado='Activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+
+    function proyectoxevaluacioninferior($valor){
+        $this->bd->conectar();
+            
+        $consulta = $this->bd->set_Consulta("SELECT proyecto.codigo,titulo,proyecto.descripcion,objetivo.valor FROM proyecto,objetivo WHERE objetivo.coproyecto=proyecto.codigo AND valor<'".$valor."' ");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+
+
+
+
+
+    function responsablexproyecto($codigo){
+        $this->bd->conectar();
+
+        $consulta = $this->bd->set_Consulta("SELECT nombre, Apellido from proyecto, aadministrativa, trabajador where codigo= '"+plan+"' and proyecto.responsable=aadministrativa.id and aadministrativa.id=trabajador.id and estado='Activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+
+    function objetivoevaluacionxproyecto($codigo){
+        $this->bd->conectar();
+        $consulta=$this->bd->set_Consulta("SELECT descripcion,valor FROM objetivo WHERE coproyecto='"+ plan +"' AND estado='Activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+
+    function listarxniñocomunidad($codigo{
+        $this->bd->conectar();
+         $consulta=$this->bd->set_Consulta("SELECT * from infante where comunidad='"+ plan +"' and estado='activo'");
+            $this->bd->desconectar();
+            return $consulta;
+    }
+
+    function profesionalesxespecializacion($nombre){
+        $this->bd->conectar();
+          $consulta=$this->bd->set_Consulta("SELECT nombre,apellido,telefono from trabajador,profesional where especializacion='"+plan+"' and profesional.id=trabajador.id ");
             $this->bd->desconectar();
             return $consulta;
     }
