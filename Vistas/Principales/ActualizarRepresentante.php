@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Infantes/validar.js"> </script>
+	<script src="../../Scripts/Representantes/validar.js"> </script>
 
 <body>
 	<section id="cart_items">
@@ -30,7 +30,7 @@
                                 if($cantidad>0){
                                 	$info = $representante->datos();
 			 							 echo '<div class="signup-form"><!--sign up form-->
-			 							 		<form id ="actualizarRepresentante" method="POST" action="/Proyecto_IS/Controladores/Representante/cActualizar.php">
+			 							 		<form id ="actualizarRepresentante" method="POST" action="/Proyecto_IS/Controladores/Representantes/cActualizar.php">
 												<table class="table table-condensed">
 													<thead>
 														<tr class="cart_menu">

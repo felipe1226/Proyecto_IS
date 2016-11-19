@@ -33,6 +33,7 @@ function validar_actualizacion(){
         } 
 }
 
+
 function validarSiNumero(numero){
     cent=0;
     if (!/^([0-9])*$/.test(numero)){

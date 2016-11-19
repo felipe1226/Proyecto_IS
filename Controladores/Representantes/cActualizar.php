@@ -9,7 +9,7 @@ $representante = new Representante();
     							$_POST['nombre'],
                                	$_POST['apellido'],
                                	$_POST['fnato'],
-                               	$_POST['celulcar'],
+                               	$_POST['celular'],
                                	$_POST['ciudad'],
                                	$_POST['direccion']
             );

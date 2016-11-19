@@ -185,16 +185,22 @@ private $bd;
 
     }
 
-   /* function eliminar_trabajador($id){
-        $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("DELETE  FROM trabajador
-                                                WHERE id = ".$id.";");
-        $this->bd->desconectar();
-         echo'  <script>
-                alert("Se ha dado de baja al trabajador exitosamente!");
-                top.location.href="/Productos_BD/Vistas/Principales/GUI_Menu.php";
-                </script>';
-    }*/
+    function profesionalesxespecializacion($tipo){
+
+        if($tipo=="profesional"){
+
+            $this->bd->conectar();
+              $consulta=$this->bd->set_Consulta("SELECT id,nombre,apellido,telefono from trabajador where id in(SELECT id FROM profesional WHERE estado='Activo')");
+                $this->bd->desconectar();
+        }
+        else{
+            $this->bd->conectar();
+              $consulta=$this->bd->set_Consulta("SELECT id,nombre,apellido,telefono from trabajador where id in(SELECT id FROM aadministrador WHERE estado='Activo')");
+                $this->bd->desconectar();
+
+        }
+        return $consulta;
+    }
 
 }
 

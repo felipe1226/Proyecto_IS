@@ -16,7 +16,7 @@
 	<link href="../../css/main.css" rel="stylesheet">
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
-	<script src="../../Scripts/Trabajadores/Validar.js"> </script>
+	<script src="../../Scripts/Trabajadores/validar.js"> </script>
 
 	
 	
@@ -68,7 +68,6 @@
 									<option>Odontologo</option>
 		                            <option>Trabajador social</option>
 		                            <option>Pedagogo</option>
-		                            <option>Etc</option>
                             
 						    	</select>
 						    </td>
@@ -76,8 +75,7 @@
 								<select name="select2" id="select2">
 		                            <option>Secretaria</option>
 									<option>Servicio</option>
-									<option>generale</option>
-		                            <option>Etc</option>
+									<option>general</option>
 						    	</select>
 						    </td>
 						</tr>

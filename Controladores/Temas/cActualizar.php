@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../Modelos/Proyectos/mTemas.php");
+require_once("../../Modelos/Proyectos/mTema.php");
 
 $tema = new Tema();
 

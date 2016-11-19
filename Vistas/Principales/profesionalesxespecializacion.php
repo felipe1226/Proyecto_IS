@@ -1,6 +1,6 @@
 <?php 
-	require_once("../../Modelos/Proyectos/mProyectos.php");
-	$proyecto = new Proyecto();
+	require_once("../../Modelos/Trabajadores/mTrabajadores.php");
+	$trabajador = new Trabajador();
  ?>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Listar profesionales por determinada especialización | Fundacion Pro Niñez</title>
+    <title>Trabajadores | Fundacion Pro Niñez</title>
    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/font-awesome.min.css" rel="stylesheet">
     <link href="../../css/prettyPhoto.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Proyectos/actualizar.js"> </script>
+	<script src="../../Scripts/Trabajadores/actualizar.js"> </script>
 
 	
 
@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="11"><center><p2>Listar profesionales por determinada especialización</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="4"><center><p2>LISTA DE PROFESIONALES POR ESPECIALIZACION</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -42,25 +42,25 @@
 					<tbody>
 
 						<?php 
-							if($consulta = $proyecto->profesionalesxespecializacion()){
+							if($consulta = $trabajador->profesionalesxespecializacion($_POST['consulta'])){
 								
                                  $cantidad = pg_num_rows($consulta);
 
                                  for($i=0;$i< $cantidad; $i++){
-                                 	$campos = $proyecto->datos();
+                                 	$campos = $trabajador->datos();
                                     
 									echo "
 									<tr>
-										<td class='cart_description'>".$campos[0]."</td>
-
 										<td class='cart_description'>".$campos[1]."</td>
 
 										<td class='cart_description'>".$campos[2]."</td>
 
+										<td class='cart_description'>".$campos[3]."</td>
+
 																				
 										<td class='cart_delete'>
-											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarProy(this.id)'><i class='fa fa-bookmark-o' title='Actualizar proyecto'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarProyecto.php'>
+											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar trabajador'></i></a>
+											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarTrabajador.php'>
 													<input name='consulta' id='consulta' type='hidden' value='".$campos[0]."'/>
 											</form>
 										</td>

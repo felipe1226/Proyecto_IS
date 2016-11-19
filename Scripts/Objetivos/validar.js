@@ -5,9 +5,9 @@ function validar_actualizacion(){
             alerts("La descripcion es obligatoria para el registro del objetivo","Campo Vacio");
         }
         else{
-            if($("#validarSiNumero").val() === ""){
+            if($("#valor").val() === ""){
                $("#valor").focus();
-            alerts("El valor es obligatorio para el registro del objetivo", "Campo Vacio");
+                alerts("El valor es obligatorio para el registro del objetivo", "Campo Vacio");
             }
             else{
                 validarSiNumero($("#valor").val());

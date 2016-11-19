@@ -29,7 +29,7 @@
 
 				<table class="table table-condensed">
 					<thead>
-						<tr class=cart_menu><td class="image" colspan="7"><center><p2>LISTA DE REPRESENTANTES</p2></center></td>
+						<tr class=cart_menu><td class="image" colspan="8"><center><p2>LISTA DE REPRESENTANTES</p2></center></td>
 						</tr>
 						<tr class="cart_menu">
 
@@ -38,6 +38,7 @@
 							<td class="description">APELLIDO</td>
 							<td class="description">FECHA DE NACIMIENTO</td>
 							<td class="description">CELULAR</td>
+							<td class="description">CIUDAD</td>
 							<td class="description">DIRECCION</td>
 							<td class="description"></td>
 						</tr>
@@ -65,9 +66,10 @@
 										<td class='cart_description'>".$campos[4]."</td>
 
 										<td class='cart_description'>".$campos[5]."</td>
+										<td class='cart_description'>".$campos[6]."</td>
 										<td class='cart_delete'>
 											<a class='cart_quantity_delete' id='".$campos[0]."' onclick='actualizarTrab(this.id)'><i class='fa fa-bookmark-o' title='Actualizar Representante'></i></a>
-											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarRepresentate.php'>
+											<form name='actualizar' id='actualizar".$campos[0]."' method='POST' action='ActualizarRepresentante.php'>
 															<input name='consulta' id = 'consulta' type='hidden' value='".$campos[0]."'/>
 											</form>
 										</td>

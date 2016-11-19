@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Comunidades/validar.js"> </script>
+	<script src="../../Scripts/Temas/validar.js"> </script>
 
 <body>
 	<section id="cart_items">

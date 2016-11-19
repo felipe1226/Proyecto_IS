@@ -48,7 +48,7 @@
 														<td>Poblacion:</td><td><input name="poblacion"  id = "poblacion" type="text" value="'.$info[3].'"/></td>
 							                         </tr>
 													<tr>
-														<td>Representante :</td><td><input name="representante"  id ="representante" type="text"  value="'.$info[4].'"/></td>
+														<td>Representante :</td><td><input disabled name="representante"  id ="representante" type="text"  value="'.$info[4].'"/></td>
 													</tr>
 													
 

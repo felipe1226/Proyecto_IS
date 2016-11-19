@@ -173,12 +173,7 @@ private $bd;
             return $consulta;
     }
 
-    function profesionalesxespecializacion($nombre){
-        $this->bd->conectar();
-          $consulta=$this->bd->set_Consulta("SELECT nombre,apellido,telefono from trabajador,profesional where especializacion='"+plan+"' and profesional.id=trabajador.id ");
-            $this->bd->desconectar();
-            return $consulta;
-    }
+    
 }
 
 ?>

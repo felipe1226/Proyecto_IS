@@ -63,6 +63,18 @@ function validacion(){
     }
 }
 
+function verificar(){
+
+    if($("#consulta") == ""){
+        alerts("Elija un tipo de trabajador para listar", "Campo Vacio");
+    }
+    else{
+        document.getElementById("consultarTrabajador").submit();
+
+    }
+
+}
+
 function validarSiNumero(numero){
     cent=0;
     if (!/^([0-9])*$/.test(numero)){

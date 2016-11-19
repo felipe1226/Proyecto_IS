@@ -18,7 +18,7 @@
 	<link href="../../css/responsive.css" rel="stylesheet">
 	<link href="../../css/js.css" rel="stylesheet">
 
-	<script src="../../Scripts/Comunidades/validar.js"> </script>
+	<script src="../../Scripts/Objetivos/validar.js"> </script>
 
 <body>
 	<section id="cart_items">
@@ -34,7 +34,7 @@
 												<table class="table table-condensed">
 													<thead>
 														<tr class="cart_menu">
-															<td colspan="4"><center>DATOS DE Objetivos</center></td>
+															<td colspan="4"><center>DATOS DE OBJETIVO</center></td>
 														</tr>
 													</thead>
 													<tbody>

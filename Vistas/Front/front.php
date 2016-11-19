@@ -70,6 +70,7 @@
                                         <li id="resgitro_trabajador"><a href="../Principales/CrearTrabajador.php" target="principal">Registrar trabajador</a></li>	
                                          <li id="listas_trabajador"><a href="../Principales/ListarTrabajador" target="principal">Listar trabajadores</a></li>	
                                           <li id="consultar_trabajador"><a href="../Principales/consultarTrabajador.php" target="principal">Consultar trabajador</a></li>
+                                          <li id="listar_especializacion"><a href="../Principales/consultaxespecializacion.php" target="principal">Listar por especializacion</a></li>
                                     </ul>
                                 </li> 
                                 
@@ -117,7 +118,7 @@
 	<div>
                 <div>
                       	
-                    <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/CrearProyecto.php"></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/Principal.php"></iframe>
                 </div>
     </div>
 

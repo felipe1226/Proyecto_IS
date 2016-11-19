@@ -23,12 +23,18 @@ function validar_actualizacion(){
                     else{
                         validarSiNumero($("#celular").val());
                         if(cent==0){
-                            if($("#direccion").val() === ""){
-                                $("#direccion").focus();
-                                alerts("La direccion es obligatoria para el registro del representante", "Campo Vacio");
+                            if($("#ciudad").val() === ""){
+                                $("#ciudad").focus();
+                                alerts("La ciudad es obligatoria para el registro del representante", "Campo Vacio");
                             }
                             else{
-                                 document.getElementById("actualizarRepresentante").submit();  
+                                if($("#direccion").val() === ""){
+                                    $("#direccion").focus();
+                                    alerts("La direccion es obligatoria para el registro del representante", "Campo Vacio");
+                                }
+                                else{
+                                     document.getElementById("actualizarRepresentante").submit();  
+                                }
                             }
                         }
                         else{
